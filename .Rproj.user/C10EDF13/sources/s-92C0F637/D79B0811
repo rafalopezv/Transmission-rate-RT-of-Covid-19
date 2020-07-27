@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1595881116132.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "838372720",
+    "id" : "D79B0811",
+    "lastKnownWriteTime" : 1595881122,
+    "last_content_update" : 1595881122548,
+    "path" : "~/Documents/covid_bolivia/sa.R",
+    "project_path" : "sa.R",
+    "properties" : {
+        "cursorPosition" : "92,0",
+        "scrollLine" : "76",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

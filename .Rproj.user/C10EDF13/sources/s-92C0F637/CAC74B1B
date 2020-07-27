@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1595880173173.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "CAC74B1B",
+    "lastKnownWriteTime" : 1595882466,
+    "last_content_update" : 1595882466533,
+    "path" : "~/Documents/covid_bolivia/rmd.Rmd",
+    "project_path" : "rmd.Rmd",
+    "properties" : {
+        "cursorPosition" : "71,0",
+        "last_setup_crc32" : "92C0F637561f9b0f",
+        "scrollLine" : "59"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

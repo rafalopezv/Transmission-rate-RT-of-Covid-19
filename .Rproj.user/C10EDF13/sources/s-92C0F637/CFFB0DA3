@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1595879006910.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "838372720",
+    "id" : "CFFB0DA3",
+    "lastKnownWriteTime" : 1595880031,
+    "last_content_update" : 1595880031284,
+    "path" : "~/Documents/covid_bolivia/funciones.R",
+    "project_path" : "funciones.R",
+    "properties" : {
+        "cursorPosition" : "92,0",
+        "scrollLine" : "76"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

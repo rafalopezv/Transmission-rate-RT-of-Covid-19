@@ -1,0 +1,75 @@
+---
+output: 
+  html_document: 
+    css: style.css
+lang: es-CO
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+source("limpieza_graficos.R")
+Sys.setlocale(locale = "es_ES.UTF-8")
+```
+
+
+<center><b><h1>COVID-19 en Bolivia</h1></b></center>
+<br>
+<center>[Juan Cristóbal Birbuet](https://www.linkedin.com/in/juan-cristóbal-birbuet-rosazza-b563208/) & [Rafael López V.](https://rafalopezv.io/about/)</center>
+<br>
+```{r, include=T, echo = F}
+hc8
+```
+<br>
+<br>
+<br>
+```{r, include=T, echo = F}
+hc8
+```
+<br>
+<br>
+<br>
+```{r, include=T, echo = F}
+graficos[[1]]
+graficos[[2]]
+graficos[[3]]
+graficos[[4]]
+graficos[[5]]
+graficos[[6]]
+graficos[[7]]
+graficos[[8]]
+graficos[[9]]
+```
+<br>
+<br>
+<br>
+```{r, include=T, echo = F}
+hc
+```
+
+```{r, include=T, echo = F}
+hc1
+```
+
+```{r, include=T, echo = F}
+hc2
+```
+
+```{r, include=T, echo = F}
+hc3
+```
+
+```{r, include=T, echo = F}
+hc4
+```
+
+```{r, include=T, echo = F}
+hc5
+```
+
+```{r, include=T, echo = F}
+hc6
+```
+
+```{r, include=T, echo = F}
+hc7
+```

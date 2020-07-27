@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1595879034549.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "D329711D",
+    "lastKnownWriteTime" : 1595882070,
+    "last_content_update" : 1595882070357,
+    "path" : "~/Documents/covid_bolivia/limpieza_graficos.R",
+    "project_path" : "limpieza_graficos.R",
+    "properties" : {
+        "cursorPosition" : "385,66",
+        "scrollLine" : "376"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
