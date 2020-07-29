@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<style>body{background-color:white;}</style>
+<script src="lib/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+<script src="lib/jquery-1.11.1/jquery.min.js"></script>
+<script src="lib/proj4js-2.3.15/proj4.js"></script>
+<link href="lib/highcharts-8.0.0/css/motion.css" rel="stylesheet" />
+<script src="lib/highcharts-8.0.0/highcharts.js"></script>
+<script src="lib/highcharts-8.0.0/highcharts-3d.js"></script>
+<script src="lib/highcharts-8.0.0/highcharts-more.js"></script>
+<script src="lib/highcharts-8.0.0/modules/stock.js"></script>
+<script src="lib/highcharts-8.0.0/modules/map.js"></script>
+<script src="lib/highcharts-8.0.0/modules/annotations.js"></script>
+<script src="lib/highcharts-8.0.0/modules/boost.js"></script>
+<script src="lib/highcharts-8.0.0/modules/data.js"></script>
+<script src="lib/highcharts-8.0.0/modules/drag-panes.js"></script>
+<script src="lib/highcharts-8.0.0/modules/drilldown.js"></script>
+<script src="lib/highcharts-8.0.0/modules/item-series.js"></script>
+<script src="lib/highcharts-8.0.0/modules/offline-exporting.js"></script>
+<script src="lib/highcharts-8.0.0/modules/overlapping-datalabels.js"></script>
+<script src="lib/highcharts-8.0.0/modules/exporting.js"></script>
+<script src="lib/highcharts-8.0.0/modules/export-data.js"></script>
+<script src="lib/highcharts-8.0.0/modules/funnel.js"></script>
+<script src="lib/highcharts-8.0.0/modules/heatmap.js"></script>
+<script src="lib/highcharts-8.0.0/modules/treemap.js"></script>
+<script src="lib/highcharts-8.0.0/modules/sankey.js"></script>
+<script src="lib/highcharts-8.0.0/modules/organization.js"></script>
+<script src="lib/highcharts-8.0.0/modules/solid-gauge.js"></script>
+<script src="lib/highcharts-8.0.0/modules/streamgraph.js"></script>
+<script src="lib/highcharts-8.0.0/modules/sunburst.js"></script>
+<script src="lib/highcharts-8.0.0/modules/vector.js"></script>
+<script src="lib/highcharts-8.0.0/modules/wordcloud.js"></script>
+<script src="lib/highcharts-8.0.0/modules/xrange.js"></script>
+<script src="lib/highcharts-8.0.0/modules/tilemap.js"></script>
+<script src="lib/highcharts-8.0.0/modules/venn.js"></script>
+<script src="lib/highcharts-8.0.0/modules/gantt.js"></script>
+<script src="lib/highcharts-8.0.0/modules/timeline.js"></script>
+<script src="lib/highcharts-8.0.0/modules/parallel-coordinates.js"></script>
+<script src="lib/highcharts-8.0.0/modules/bullet.js"></script>
+<script src="lib/highcharts-8.0.0/modules/coloraxis.js"></script>
+<script src="lib/highcharts-8.0.0/modules/dumbbell.js"></script>
+<script src="lib/highcharts-8.0.0/plugins/motion.js"></script>
+<script src="lib/highcharts-8.0.0/custom/reset.js"></script>
+<script src="lib/highchart-binding-0.7.0.9001/highchart.js"></script>
+
+</head>
+<body>
+<div id="htmlwidget_container">
+  <div id="htmlwidget-9930f5e4824e996513b5" style="width:100%;height:500px;" class="highchart html-widget"></div>
+</div>
+<script type="application/json" data-for="htmlwidget-9930f5e4824e996513b5">{"x":{"hc_opts":{"title":{"text":null},"yAxis":{"title":{"text":"Rt"},"min":0,"plotLines":[{"label":{"text":"Objetivo"},"color":"#264653","width":2,"value":1}]},"credits":{"enabled":false},"exporting":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0},"treemap":{"layoutAlgorithm":"squarified"},"scatter":{"marker":{"radius":7,"enabled":true,"symbol":"circle"},"states":{"hover":{"halo":{"size":3}}}}},"series":[{"group":"group","data":[{"base":"fallecidos","pais_o_region":"Beni","dia_de_inicio":"2020-07-16","dia_de_cierre":"2020-07-22","promedio":0.492,"limite_inferior":0.236,"limite_superior":0.841,"clase":"no","low":0.236,"high":0.841,"name":"Beni"},{"base":"fallecidos","pais_o_region":"Tarija","dia_de_inicio":"2020-07-22","dia_de_cierre":"2020-07-28","promedio":0.589,"limite_inferior":0.294,"limite_superior":0.985,"clase":"no","low":0.294,"high":0.985,"name":"Tarija"},{"base":"fallecidos","pais_o_region":"Pando","dia_de_inicio":"2020-07-20","dia_de_cierre":"2020-07-26","promedio":0.807,"limite_inferior":0.517,"limite_superior":1.16,"clase":"no","low":0.517,"high":1.16,"name":"Pando"},{"base":"fallecidos","pais_o_region":"Cochabamba","dia_de_inicio":"2020-07-21","dia_de_cierre":"2020-07-27","promedio":1.03,"limite_inferior":0.843,"limite_superior":1.235,"clase":"no","low":0.843,"high":1.235,"name":"Cochabamba"},{"base":"fallecidos","pais_o_region":"Oruro","dia_de_inicio":"2020-07-19","dia_de_cierre":"2020-07-25","promedio":1.095,"limite_inferior":0.767,"limite_superior":1.481,"clase":"no","low":0.767,"high":1.481,"name":"Oruro"},{"base":"fallecidos","pais_o_region":"Bolivia","dia_de_inicio":"2020-07-21","dia_de_cierre":"2020-07-27","promedio":1.112,"limite_inferior":1.01,"limite_superior":1.22,"clase":"si","low":1.01,"high":1.22,"name":"Bolivia"},{"base":"fallecidos","pais_o_region":"Santa Cruz","dia_de_inicio":"2020-07-21","dia_de_cierre":"2020-07-27","promedio":1.14,"limite_inferior":0.956,"limite_superior":1.341,"clase":"no","low":0.956,"high":1.341,"name":"Santa Cruz"},{"base":"fallecidos","pais_o_region":"Potosí","dia_de_inicio":"2020-07-16","dia_de_cierre":"2020-07-22","promedio":1.176,"limite_inferior":0.473,"limite_superior":2.194,"clase":"no","low":0.473,"high":2.194,"name":"Potosí"},{"base":"fallecidos","pais_o_region":"La Paz","dia_de_inicio":"2020-07-21","dia_de_cierre":"2020-07-27","promedio":1.556,"limite_inferior":1.182,"limite_superior":1.981,"clase":"no","low":1.182,"high":1.981,"name":"La Paz"},{"base":"fallecidos","pais_o_region":"Chuquisaca","dia_de_inicio":"2020-07-22","dia_de_cierre":"2020-07-28","promedio":1.917,"limite_inferior":1.44,"limite_superior":2.462,"clase":"no","low":1.44,"high":2.462,"name":"Chuquisaca"}],"type":"errorbar","id":"error","color":"#2F546B","stemWidth":3,"whiskerLength":0},{"group":"group","data":[{"base":"fallecidos","pais_o_region":"Beni","dia_de_inicio":"2020-07-16","dia_de_cierre":"2020-07-22","promedio":0.492,"limite_inferior":0.236,"limite_superior":0.841,"clase":"no","y":0.492,"name":"Beni"},{"base":"fallecidos","pais_o_region":"Tarija","dia_de_inicio":"2020-07-22","dia_de_cierre":"2020-07-28","promedio":0.589,"limite_inferior":0.294,"limite_superior":0.985,"clase":"no","y":0.589,"name":"Tarija"},{"base":"fallecidos","pais_o_region":"Pando","dia_de_inicio":"2020-07-20","dia_de_cierre":"2020-07-26","promedio":0.807,"limite_inferior":0.517,"limite_superior":1.16,"clase":"no","y":0.807,"name":"Pando"},{"base":"fallecidos","pais_o_region":"Cochabamba","dia_de_inicio":"2020-07-21","dia_de_cierre":"2020-07-27","promedio":1.03,"limite_inferior":0.843,"limite_superior":1.235,"clase":"no","y":1.03,"name":"Cochabamba"},{"base":"fallecidos","pais_o_region":"Oruro","dia_de_inicio":"2020-07-19","dia_de_cierre":"2020-07-25","promedio":1.095,"limite_inferior":0.767,"limite_superior":1.481,"clase":"no","y":1.095,"name":"Oruro"},{"base":"fallecidos","pais_o_region":"Bolivia","dia_de_inicio":"2020-07-21","dia_de_cierre":"2020-07-27","promedio":1.112,"limite_inferior":1.01,"limite_superior":1.22,"clase":"si","y":1.112,"name":"Bolivia"},{"base":"fallecidos","pais_o_region":"Santa Cruz","dia_de_inicio":"2020-07-21","dia_de_cierre":"2020-07-27","promedio":1.14,"limite_inferior":0.956,"limite_superior":1.341,"clase":"no","y":1.14,"name":"Santa Cruz"},{"base":"fallecidos","pais_o_region":"Potosí","dia_de_inicio":"2020-07-16","dia_de_cierre":"2020-07-22","promedio":1.176,"limite_inferior":0.473,"limite_superior":2.194,"clase":"no","y":1.176,"name":"Potosí"},{"base":"fallecidos","pais_o_region":"La Paz","dia_de_inicio":"2020-07-21","dia_de_cierre":"2020-07-27","promedio":1.556,"limite_inferior":1.182,"limite_superior":1.981,"clase":"no","y":1.556,"name":"La Paz"},{"base":"fallecidos","pais_o_region":"Chuquisaca","dia_de_inicio":"2020-07-22","dia_de_cierre":"2020-07-28","promedio":1.917,"limite_inferior":1.44,"limite_superior":2.462,"clase":"no","y":1.917,"name":"Chuquisaca"}],"type":"scatter","name":"Rt","linkedTo":"error","color":"#2F546B"}],"chart":{"style":{"fontFamily":"IBM Plex Mono"}},"xAxis":{"title":{"text":""},"categories":["Beni","Tarija","Pando","Cochabamba","Oruro","Bolivia","Santa Cruz","Potosí","La Paz","Chuquisaca"]},"tooltip":{"enabled":true,"valueDecimals":3,"borderWidth":0.01,"style":{"fontFamily":"IBM Plex Mono"},"pointFormat":"<b>{point.pais_o_region}<\/b><br>\n                               Rt última semana: <b>{point.promedio}<\/b><br>\n                               Límite superior: <b>{point.limite_superior}<\/b><br>\n                               Límite inferior: <b>{point.limite_inferior}<\/b><br>\n                               Día de inicio de medición: <b>{point.dia_de_inicio}<\/b><br>\n                               Día de cierre de medición: <b>{point.dia_de_cierre}<\/b><br>","headerFormat":"<b>{point.pais_o_region}<\/b>"}},"theme":{"chart":{"backgroundColor":"transparent"}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["En","Feb","Mar","Abr","Mayo","Jun","Jul","Ag","Sep","Oct","Nov","Dic"],"thousandsSep":" ","weekdays":["Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado","Domingo"]}},"type":"chart","fonts":"IBM+Plex+Mono","debug":false},"evals":[],"jsHooks":[]}</script>
+<script type="application/htmlwidget-sizing" data-for="htmlwidget-9930f5e4824e996513b5">{"viewer":{"width":"100%","height":350,"padding":0,"fill":true},"browser":{"width":"100%","height":500,"padding":0,"fill":true}}</script>
+</body>
+</html>

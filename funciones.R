@@ -64,9 +64,10 @@ rt_tiempo <- function(.data) {
   hchart(
     .data,
     "line",
-    hcaes(dia_de_cierre, promedio, group = base)
+    hcaes(dia_de_cierre, promedio),
+    color = "#E76F51", 
+    showInLegend = F
   ) %>% 
-    hc_colors(colors = c("#CB1724", "#09283C")) %>% 
     hc_plotOptions(
       series = list(
         marker = list(radius = 1.5, enabled = T, symbol = "circle"),
@@ -74,7 +75,7 @@ rt_tiempo <- function(.data) {
         lineWidth = 4
       )
     ) %>% 
-    hc_chart(style = list(fontFamily = "Source Code Pro")) %>%
+    hc_chart(style = list(fontFamily = "IBM Plex Mono")) %>% 
     hc_tooltip(enabled = T, valueDecimals = 3, borderWidth = 0.01,
                pointFormat=paste("<b>{point.pais_o_region}</b><br>
                                Rt: <b>{point.promedio}</b><br>
@@ -83,10 +84,10 @@ rt_tiempo <- function(.data) {
                                Día de inicio de medición: <b>{point.dia_de_inicio}</b><br>
                                Día de cierre de medición: <b>{point.dia_de_cierre}</b><br>"), 
                headerFormat = "") %>% 
-    hc_size(height = 200)  %>% 
+    hc_size(height = 170)  %>% 
     hc_yAxis(title = list(text = "")) %>% 
     hc_xAxis(title = list(text = NULL)) %>% 
     hc_title(text = pais,
              align = "center") %>% 
-    hc_legend(verticalAlign = "top")
+    hc_legend(visible = F)
 }

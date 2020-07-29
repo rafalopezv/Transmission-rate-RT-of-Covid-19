@@ -5,13 +5,16 @@
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "2665813761",
+    "hash" : "1868061132",
     "id" : "B00E99AF",
-    "lastKnownWriteTime" : 1595882466,
-    "last_content_update" : 1595882466,
+    "lastKnownWriteTime" : 1596041636,
+    "last_content_update" : 1596041636628,
     "path" : "~/Documents/covid_bolivia/index.Rmd",
     "project_path" : "index.Rmd",
     "properties" : {
+        "cursorPosition" : "75,21",
+        "last_setup_crc32" : "92C0F63791ca5c34",
+        "scrollLine" : "62"
     },
     "read_only" : false,
     "read_only_alternatives" : [

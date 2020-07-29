@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1596040557427.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1739617865",
+    "id" : "24C82FD2",
+    "lastKnownWriteTime" : 1596041103,
+    "last_content_update" : 1596041103437,
+    "path" : "~/Documents/covid_bolivia/style.css",
+    "project_path" : "style.css",
+    "properties" : {
+        "cursorPosition" : "16,18",
+        "scrollLine" : "1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 10,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "css"
+}

@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1596035012922.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "BA8358CA",
+    "lastKnownWriteTime" : 140735568017104,
+    "last_content_update" : 1596035012922,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "8BB19F81",
+        "caption" : ".",
+        "contentUrl" : "grid_resource/gridviewer.html?env=_rs_no_env&obj=&cache_key=8BB19F81",
+        "displayedObservations" : 10,
+        "environment" : "_rs_no_env",
+        "expression" : "structure(list(base = c(\"fallecidos\", \"fallecidos\", \"fallecidos\",  \"fallecidos\", \"fallecidos\", \"fallecidos\", \"fallecidos\", \"fallecidos\",  \"fallecidos\", \"fallecidos\"), pais_o_region = c(\"Pando\", \"Beni\",  \"Cochabamba\", \"Bolivia\", \"Oruro\", \"Santa Cruz\", \"Tarija\", \"La Paz\",  \"Chuquisaca\", \"Potosí\"), dia_de_inicio = structure(c(18463,  18459, 18464, 18464, 18462, 18464, 18458, 18464, 18458, 18459 ), class = \"Date\"), dia_de_cierre = structure(c(18469, 18465,  18470, 18470, 18468, 18470, 18464, 18470, 18464, 18465), class = \"Date\"),      promedio = c(0.681, 0.704, 1.08, 1.112, 1.16, 1.214, 1.252,      1.426, 2.46, 2.726), limite_inferior = c(0.416, 0.375, 0.888,      1.01, 0.825, 1.026, 0.784, 1.083, 1.647, 1.558), limite_superior = c(1.01,      1.136, 1.29, 1.22, 1.551, 1.418, 1.826, 1.816, 3.432, 4.215     ), clase = c(\"no\", \"no\", \"no\", \"si\", \"no\", \"no\", \"no\", \"no\",      \"no\", \"no\")), row.names = c(NA, -10L), class = c(\"tbl_df\",  \"tbl\", \"data.frame\"))",
+        "object" : "",
+        "preview" : 0,
+        "totalObservations" : 10,
+        "variables" : 8
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 9,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

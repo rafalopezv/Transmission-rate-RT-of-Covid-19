@@ -11,6 +11,13 @@ source("limpieza_graficos.R")
 Sys.setlocale(locale = "es_ES.UTF-8")
 ```
 
+enlace respaldo: https://www.medrxiv.org/content/10.1101/2020.05.03.20089854v4.full.pdf
+
+En esta sección se presenta el cálculo semanal del Número de Reproducción Efectivo dependiente del tiempo (Rt) para Bolivia y sus 9 Departamentos. El cálculo se actualiza cada semana y se efectúa con base en el reporte oficial de personas fallecidas, en lugar de hacerlo con el número de personas infectadas. Lo anterior permite reducir el “ruido estadístico” que suele producirse a causa de las variaciones en el número de los test que se realizan, la demora en los resultados de los test, y/o cambios en el protocolo de los test. 
+
+En nuestro caso, Rt muestra la velocidad de propagación semanal del virus. Un Rt=1, muestra que durante esa semana la epidemia no creció exponencialmente y se estabilizó; un Rt <1, sugiere que en esa semana la epidemia estuvo en declive y bajo “control”, y un Rt> 1 sugiere que en la semana la epidemia tuvo un crecimiento exponencial y puede considerarse “fuera de control”. En la pandemia actual, se debe mirar hacia Rt para evaluar la transmisión viral, lo que importa es obtener un Rt < 1 de forma consistente, semana tras semana, hasta extinguir la epidemia.
+
+¿Cuál es la diferencia entre R0 y Rt? Mientras que R0 describe el potencial de propagación inicial de una infección en una población completamente susceptible, el número reproductivo efectivo, Rt, captura la transmisión una vez que el virus se propaga y a medida que se inician las medidas de contención
 
 <center><b><h1>COVID-19 en Bolivia</h1></b></center>
 <br>

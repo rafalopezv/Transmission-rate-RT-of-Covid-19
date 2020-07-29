@@ -1,0 +1,52 @@
+
+data(mpg, package = "ggplot2")
+
+mpgman2 <- mpg %>% 
+  group_by(manufacturer, year) %>% 
+  dplyr::summarise(
+    n = dplyr::n(),
+    displ = mean(displ)
+  )
+
+
+hchart(
+  mpgman2, "scatter", hcaes(x = manufacturer, y = n, group = year),
+  colorKey = "displ",
+  color = c("#FCA50A", "#FCFFA4"),
+  name = c("Year 1999", "Year 2008")
+) %>% 
+  hc_colorAxis(min = 0, max = 5)
+
+temp_1 %>% 
+  group_split(clase) -> temp_2
+
+highchart() %>% 
+  hc_add_series(data = temp_1, "point", hcaes(x = pais_o_region, y = promedio, color = clase),
+                name = "Rt", linkedTo = "error", color = c("red", "green")) %>% 
+  hc_xAxis(title = list(text = ""),
+           categories = temp_1$pais_o_region) 
+  
+  
+  hc_add_series(data = temp_2[[2]], "scatter", hcaes(x = pais_o_region, y = promedio),
+                name = "Rt", linkedTo = "error", color = "blue") 
+  
+
+
+hchart(
+  temp_1, "scatter", hcaes(x = pais_o_region, y = promedio, group = clase),
+  colorKey = "promedio",
+  color = c("#FCA50A", "#FCFFA4"),
+  name = c("Year 1999", "Year 2008")
+)
+
+mpgman2 %<>% arrange(n) %>% ungroup()
+hchart(
+  mpgman2, "scatter", hcaes(x = manufacturer, y = n, color = year),
+  colorKey = "displ",
+  color = c("#FCA50A", "#FCFFA4"),
+  name = c("Year 1999", "Year 2008")
+)
+
+temp_1 %<>% arrange(promedio)
+
+  
