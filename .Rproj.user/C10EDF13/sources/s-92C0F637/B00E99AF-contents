@@ -16,7 +16,9 @@ Sys.setlocale(locale = "es_ES.UTF-8")
 <br>
 <center>[Juan Cristóbal Birbuet](https://www.linkedin.com/in/juan-cristóbal-birbuet-rosazza-b563208/) & [Rafael López V.](https://rafalopezv.io/about/)</center>
 <br>
-
+<center>Última actualización: `r format(Sys.time(), '%d %B, %Y, %X  %Z')`</center>
+<br>
+<br>
 <center><h1>Número de Reproducción Efectivo dependiente del tiempo (Rt)</h1></center>
 <br>
 <br>
@@ -56,7 +58,7 @@ millon_fallecidos
 ```
 <br>
 <br>
-<center><h1>Confirmados por millón de habitantes</h1></center>
+<center><h1>Infectados confirmados por millón de habitantes</h1></center>
 Gráfico interactivo: Pase el mouse sobre el gráfico para más detalles. Puede desactivar las categorías listadas en la derecha
 ```{r, include=T, echo = F}
 millon_confirmados
@@ -70,7 +72,7 @@ evolucion_fallecidos
 ```
 <br>
 <br>
-<center><h1>Serie de tiempo de confirmados por departamento</h1></center>
+<center><h1>Serie de tiempo de infectados confirmados por departamento</h1></center>
 Gráfico interactivo: Pase el mouse sobre el gráfico para más detalles. Puede desactivar los departamentos de la leyenda
 ```{r, include=T, echo = F}
 evolucion_confirmados
