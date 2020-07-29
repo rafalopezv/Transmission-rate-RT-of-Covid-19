@@ -1,0 +1,57 @@
+"0","knitr::opts_chunk$set(echo = TRUE)"
+"0","source(""limpieza_graficos.R"")"
+"2","Parsed with column specification:
+cols(
+  Fecha = [34mcol_date(format = """")[39m,
+  `La Paz` = [32mcol_double()[39m,
+  Cochabamba = [32mcol_double()[39m,
+  `Santa Cruz` = [32mcol_double()[39m,
+  Oruro = [32mcol_double()[39m,
+  Potosí = [32mcol_double()[39m,
+  Tarija = [32mcol_double()[39m,
+  Chuquisaca = [32mcol_double()[39m,
+  Beni = [32mcol_double()[39m,
+  Pando = [32mcol_double()[39m
+)
+"
+"2","Parsed with column specification:
+cols(
+  Fecha = [34mcol_date(format = """")[39m,
+  `La Paz` = [32mcol_double()[39m,
+  Cochabamba = [32mcol_double()[39m,
+  `Santa Cruz` = [32mcol_double()[39m,
+  Oruro = [32mcol_double()[39m,
+  Potosí = [32mcol_double()[39m,
+  Tarija = [32mcol_double()[39m,
+  Chuquisaca = [32mcol_double()[39m,
+  Beni = [32mcol_double()[39m,
+  Pando = [32mcol_double()[39m
+)
+"
+"2","Parsed with column specification:
+cols(
+  .default = col_double(),
+  `Province/State` = [31mcol_character()[39m,
+  `Country/Region` = [31mcol_character()[39m
+)
+"
+"2","See spec(...) for full column specifications.
+"
+"2","Parsed with column specification:
+cols(
+  .default = col_double(),
+  `Province/State` = [31mcol_character()[39m,
+  `Country/Region` = [31mcol_character()[39m
+)
+"
+"2","See spec(...) for full column specifications.
+"
+"2","
+"
+"2","
+"
+"0","Sys.setlocale(locale = ""es_ES.UTF-8"")"
+"1","[1]"
+"1"," ""es_ES.UTF-8/es_ES.UTF-8/es_ES.UTF-8/C/es_ES.UTF-8/en_US.UTF-8"""
+"1","
+"

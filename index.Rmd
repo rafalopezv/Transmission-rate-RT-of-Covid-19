@@ -77,4 +77,74 @@ Gráfico interactivo: Pase el mouse sobre el gráfico para más detalles. Puede 
 ```{r, include=T, echo = F}
 evolucion_confirmados
 ```
+<br>
+<br>
+<center><h1>¿Se están aplanando las curvas?</h1></center>
+<center>Nuevos infectados confirmados por semana</center>
+```{r, include=T, echo = F,  fig.height = 15, fig.width = 20}
+curva_confirmados
+```
+<br>
+<br>
+<center><h1>¿Se están aplanando las curvas?</h1></center>
+<center>Nuevos fallecidos por semana</center>
+```{r, include=T, echo = F,  fig.height = 15, fig.width = 20}
+curva_fallecidos
+```
+
+<center><h1>Referencias y documentos<h1></center>
+<br>
+<br>
+<center><h1>Anexo metodológico sobre Rt<h1></center>
+<center><small>Clic en el ícono</small></center>
+<br>
+<br>
+<center>[<img src = "pdf.png"  height="60" width="60">](https://rafalopezv.io/static/avina/anexo_jcb_rlv.pdf)</center>
+<br>
+<br>
+<center><h1>Código<h1></center>
+<center><small>Clic en el ícono</small></center>
+<br>
+<br>
+<center>[<img src = "github.png"  height="60" width="90">](https://github.com/rafalopezv/covid_bolivia)</center>
+<br>
+<br>
+<center><h1>Bases de datos<h1></center>
+<br>
+<center>https://github.com/CSSEGISandData/COVID-19
+<br>
+https://raw.githubusercontent.com/mauforonda/covid19-bolivia/master/confirmados.csv
+<br>
+https://raw.githubusercontent.com/mauforonda/covid19-bolivia/master/decesos.csv</center>
+
+<br>
+<br>
+<center><h1>R y librearías utilizadas<h1></center>
+<br>
+
+<small>
+Anne Cori (2019). EpiEstim: Estimate Time Varying Reproduction Numbers from Epidemic Curves. R package version 2.2-1. https://CRAN.R-project.org/package=EpiEstim
+
+Joshua Kunst (2020). highcharter: A Wrapper for the 'Highcharts' Library. http://jkunst.com/highcharter, https://github.com/jbkunst/highcharter.
+
+Stefan Milton Bache and Hadley Wickham (2014). magrittr: A Forward-Pipe Operator for R. R package version 1.5. https://CRAN.R-project.org/package=magrittr
+
+Hadley Wickham (2017). tidyverse: Easily Install and Load the 'Tidyverse'. R package version 1.2.1. https://CRAN.R-project.org/package=tidyverse
+  
+Hadley Wickham, Romain François, Lionel Henry and Kirill Müller (2020). dplyr: A Grammar of Data Manipulation. R package version 1.0.0. https://CRAN.R-project.org/package=dplyr
+
+Hadley Wickham and Lionel Henry (2020). tidyr: Tidy Messy Data. R package version 1.1.0. https://CRAN.R-project.org/package=tidyr
+
+Hadley Wickham (2019). rvest: Easily Harvest (Scrape) Web Pages. R package version 0.3.4. https://CRAN.R-project.org/package=rvest
+
+Yihui Xie (2019). knitr: A General-Purpose Package for Dynamic Report Generation in R. R package version 1.24.
+</small>
+<br>
+<br>
+
+
+
+
+
+
 

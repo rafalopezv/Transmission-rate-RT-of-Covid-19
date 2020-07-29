@@ -1,52 +1,46 @@
+df_dptos %>% 
+  filter(base == "confirmados") %>% 
+  bind_rows(., bol_confirmados) %>% 
+  group_by(pais_region, semana) %>% 
+  summarise(
+    incidencia = sum(incidencia)
+  ) %>% 
+  group_by(pais_region) %>% 
+  mutate(total = sum(incidencia)) %>% 
+  group_split(pais_region)  %>% 
+  map(., ~(mutate(., ult_semana = pull(., incidencia) %>% last))) %>% 
+  bind_rows() %>% 
+  ungroup() %>% 
+  mutate(etiqueta = paste0(pais_region, "\n", total, "casos acumulados", "\n", ult_semana, "casos ", "última semana")) %>%
+  arrange(total) %>% 
+  mutate(
+    num = 1:nrow(.),
+    clase = case_when(
+      pais_region == "Bolivia" ~ "si",
+      T ~ "no"
+    )
+  ) -> temp
 
-data(mpg, package = "ggplot2")
-
-mpgman2 <- mpg %>% 
-  group_by(manufacturer, year) %>% 
-  dplyr::summarise(
-    n = dplyr::n(),
-    displ = mean(displ)
-  )
-
-
-hchart(
-  mpgman2, "scatter", hcaes(x = manufacturer, y = n, group = year),
-  colorKey = "displ",
-  color = c("#FCA50A", "#FCFFA4"),
-  name = c("Year 1999", "Year 2008")
-) %>% 
-  hc_colorAxis(min = 0, max = 5)
-
-temp_1 %>% 
-  group_split(clase) -> temp_2
-
-highchart() %>% 
-  hc_add_series(data = temp_1, "point", hcaes(x = pais_o_region, y = promedio, color = clase),
-                name = "Rt", linkedTo = "error", color = c("red", "green")) %>% 
-  hc_xAxis(title = list(text = ""),
-           categories = temp_1$pais_o_region) 
+temp %>% 
+  arrange(total) %>% 
+  mutate(num = 1:nrow(.)) %>% 
+  ggplot(aes(semana, incidencia, fill = clase)) + 
+  geom_col(color = NA, alpha = 0.9) + 
+  facet_wrap(vars(fct_reorder(etiqueta, num, .desc = T)), scales = "free", ncol = 4) +
+  hrbrthemes::theme_ipsum_rc(grid = F, base_family = "Source Code Pro Medium", strip_text_size = 13) +
+  theme(
+    axis.text.x = element_blank(),
+    axis.text.y = element_blank(),
+    axis.title.x = element_blank(),
+    axis.title.y = element_blank(),
+    panel.background = element_rect(fill = "white", colour = NA),
+    strip.background = element_rect(fill = "white", colour = NA)
+  ) + 
+  scale_fill_manual(values = c("#264653", "#E76F51")) 
   
-  
-  hc_add_series(data = temp_2[[2]], "scatter", hcaes(x = pais_o_region, y = promedio),
-                name = "Rt", linkedTo = "error", color = "blue") 
-  
 
 
-hchart(
-  temp_1, "scatter", hcaes(x = pais_o_region, y = promedio, group = clase),
-  colorKey = "promedio",
-  color = c("#FCA50A", "#FCFFA4"),
-  name = c("Year 1999", "Year 2008")
-)
 
-mpgman2 %<>% arrange(n) %>% ungroup()
-hchart(
-  mpgman2, "scatter", hcaes(x = manufacturer, y = n, color = year),
-  colorKey = "displ",
-  color = c("#FCA50A", "#FCFFA4"),
-  name = c("Year 1999", "Year 2008")
-)
 
-temp_1 %<>% arrange(promedio)
 
   

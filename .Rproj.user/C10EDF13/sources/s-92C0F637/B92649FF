@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1596056637830.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "B92649FF",
+    "lastKnownWriteTime" : 0,
+    "last_content_update" : 1596056637830,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "id" : "ff0f3bc20a3f4ed7b2fe6926fb7fc5c3",
+        "name" : "cita",
+        "title" : "cita"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 11,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "object_explorer"
+}

@@ -5,15 +5,15 @@
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "2391228740",
+    "hash" : "0",
     "id" : "D329711D",
-    "lastKnownWriteTime" : 1596041641,
-    "last_content_update" : 1596041641999,
+    "lastKnownWriteTime" : 1596056419,
+    "last_content_update" : 1596056419983,
     "path" : "~/Documents/covid_bolivia/limpieza_graficos.R",
     "project_path" : "limpieza_graficos.R",
     "properties" : {
-        "cursorPosition" : "419,29",
-        "scrollLine" : "412"
+        "cursorPosition" : "37,108",
+        "scrollLine" : "27"
     },
     "read_only" : false,
     "read_only_alternatives" : [

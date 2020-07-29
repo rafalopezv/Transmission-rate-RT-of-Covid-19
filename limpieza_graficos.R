@@ -419,6 +419,92 @@ hchart(
   hc_chart(style = list(fontFamily = "IBM Plex Mono")) %>% 
   hc_legend(reversed = T) -> evolucion_fallecidos
 
+# aplanamiento de curvas confirmados
+df_dptos %>% 
+  filter(base == "confirmados") %>% 
+  bind_rows(., bol_confirmados) %>% 
+  group_by(pais_region, semana) %>% 
+  summarise(
+    incidencia = sum(incidencia)
+  ) %>% 
+  group_by(pais_region) %>% 
+  mutate(total = sum(incidencia)) %>% 
+  group_split(pais_region)  %>% 
+  map(., ~(mutate(., ult_semana = pull(., incidencia) %>% last))) %>% 
+  bind_rows() %>% 
+  ungroup() %>% 
+  mutate(etiqueta = paste0(pais_region, "\n", total, " casos acumulados", "\n", ult_semana, " casos ", "última semana")) %>%
+  arrange(total) %>% 
+  mutate(
+    num = 1:nrow(.),
+    clase = case_when(
+      pais_region == "Bolivia" ~ "si",
+      T ~ "no"
+    )
+  ) -> temp
+
+temp %>% 
+  arrange(total) %>% 
+  mutate(num = 1:nrow(.)) %>% 
+  ggplot(aes(semana, incidencia, fill = clase)) + 
+  geom_col(color = NA, alpha = 0.9) + 
+  facet_wrap(vars(fct_reorder(etiqueta, num, .desc = T)), scales = "free", ncol = 4) +
+  hrbrthemes::theme_ipsum_rc(grid = F, base_family = "Source Code Pro Medium", strip_text_size = 21) +
+  theme(
+    axis.text.x = element_blank(),
+    axis.text.y = element_blank(),
+    axis.title.x = element_blank(),
+    axis.title.y = element_blank(),
+    panel.background = element_rect(fill = "white", colour = NA),
+    strip.background = element_rect(fill = "white", colour = NA),
+    legend.position = "none"
+  ) + 
+  scale_fill_manual(values = c("#264653", "#E76F51")) -> curva_confirmados
+
+# aplanamiento de curvas confirmados
+df_dptos %>% 
+  filter(base == "fallecidos") %>% 
+  bind_rows(., bol_fallecidos) %>% 
+  group_by(pais_region, semana) %>% 
+  summarise(
+    incidencia = sum(incidencia)
+  ) %>% 
+  group_by(pais_region) %>% 
+  mutate(total = sum(incidencia)) %>% 
+  group_split(pais_region)  %>% 
+  map(., ~(mutate(., ult_semana = pull(., incidencia) %>% last))) %>% 
+  bind_rows() %>% 
+  ungroup() %>% 
+  mutate(etiqueta = paste0(pais_region, "\n", total, " casos acumulados", "\n", ult_semana, " casos ", "última semana")) %>%
+  arrange(total) %>% 
+  mutate(
+    num = 1:nrow(.),
+    clase = case_when(
+      pais_region == "Bolivia" ~ "si",
+      T ~ "no"
+    )
+  ) -> temp
+
+temp %>% 
+  arrange(total) %>% 
+  mutate(num = 1:nrow(.)) %>% 
+  ggplot(aes(semana, incidencia, fill = clase)) + 
+  geom_col(color = NA, alpha = 0.9) + 
+  facet_wrap(vars(fct_reorder(etiqueta, num, .desc = T)), scales = "free", ncol = 4) +
+  hrbrthemes::theme_ipsum_rc(grid = F, base_family = "Source Code Pro Medium", strip_text_size = 21) +
+  theme(
+    axis.text.x = element_blank(),
+    axis.text.y = element_blank(),
+    axis.title.x = element_blank(),
+    axis.title.y = element_blank(),
+    panel.background = element_rect(fill = "white", colour = NA),
+    strip.background = element_rect(fill = "white", colour = NA),
+    legend.position = "none"
+  ) + 
+  scale_fill_manual(values = c("#264653", "#E76F51")) -> curva_fallecidos
+
+
+
 
 
 # # prevalencia confirmados

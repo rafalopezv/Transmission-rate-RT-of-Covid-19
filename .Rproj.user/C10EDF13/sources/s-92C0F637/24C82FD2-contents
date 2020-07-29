@@ -1,9 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap');
  /*------------- Whole Document---------------- */
 
 body {
-    font-family: 'IBM Plex Mono';
+    font-family: 'Source Code Pro';
     font-size: 19px;
 }
 
@@ -16,3 +15,12 @@ a {
  a:hover {
     color: #2A9D8F; /* darker color when hovering */
   }
+
+/*----------------- font-color ---------------------*/  
+h1, h2, h3 {
+ color: #3f3f3f;
+}
+
+p { 
+ color: #3f3f3f;
+}
