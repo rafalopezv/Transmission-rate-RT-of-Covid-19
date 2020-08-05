@@ -98,7 +98,7 @@ curva_confirmados
 <center><h1>Tablas<h1></center>
 <br>
 <br>
-Aquí encontrará los datos con los indicadores antes descritos pero en formato de tabla para Bolivia y sus departamentos, actualizados diariamente
+Aquí encontrará los datos con los indicadores antes descritos pero en formato de tabla para Bolivia y sus departamentos, actualizados diariamente.
 <br>
 ```{r, echo=F, warning=F, message=F}
 library(reactable)
@@ -145,7 +145,7 @@ df_dptos %>%
 ```
 <br>
 <br>
-Aquí encontrará los datos con los indicadores antes descritos pero en formato de tabla para 188 países del mundo, actualizados diariamente 
+Aquí encontrará los datos con los indicadores antes descritos pero en formato de tabla para 188 países del mundo, actualizados diariamente. 
 
 ```{r, echo=F, warning=F, message=F}
 library(reactable)
