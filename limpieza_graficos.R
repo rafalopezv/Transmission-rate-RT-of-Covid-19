@@ -86,7 +86,7 @@ df_dptos %>%
                  incidencia = abs(incidencia))) %>%
   bind_rows() %>% 
   mutate(pais_region = str_to_title(pais_region)) %>% 
-  filter(!is.na(incidencia)) -> df_dptos
+  mutate(incidencia = replace_na(incidencia, 0)) -> df_dptos
 
 #----------------------------------------
 # limpieza datos mundiales 
@@ -208,7 +208,7 @@ df %>%
                  incidencia = casos_acumulados - incidencia,
                  incidencia = abs(incidencia))) %>%
   bind_rows() %>% 
-  filter(!is.na(incidencia)) -> df_mundo 
+  mutate(incidencia = replace_na(incidencia, 0)) -> df_mundo 
 
 rm(df)
 
@@ -248,6 +248,7 @@ colores <- c("#264653","#2a9d8f","#e9c46a","#f4a261","#e76f51", "#e63946", "#d90
 df_dptos %>%
   filter(base == "fallecidos") %>% 
   bind_rows(., bol_fallecidos) %>% 
+  filter(fecha > "2020-05-09") %>% 
   group_split(pais_region)  -> temp
 
 map(temp, epistim_intervalo_1) %>%
@@ -283,12 +284,27 @@ highchart() %>%
   ) %>%
   hc_xAxis(title = list(text = ""),
            categories = temp_1$pais_o_region) %>%
-  hc_yAxis(title = list(text = "Rt"), min = 0,
+  hc_yAxis(title = list(text = "Rt"), min = 0, gridLineWidth=  0, 
            plotLines = list(
-             list(label = list(text = "Objetivo"),
-                  color = "#264653",
-                  width = 2,
-                  value = 1)))  %>% 
+             list(label = list(text = "Rt = 1"),
+                  color = "#D62828",
+                  width = 5,
+                  value = 1),
+             list(color = "#81B29A",
+                  width = 0.3,
+                  value = 1.5),
+             list(color = "#81B29A",
+                  width = 0.3,
+                  value = 2),
+             list(color = "#81B29A",
+                  width = 0.3,
+                  value = 2.5),
+             list(color = "#81B29A",
+                  width = 0.3,
+                  value = 0.5),
+             list(color = "#81B29A",
+                  width = 0.3,
+                  value = 3)))  %>% 
   hc_tooltip(enabled = T, valueDecimals = 3, borderWidth = 0.01, style = list(fontFamily = "IBM Plex Mono"),
              pointFormat=paste("<b>{point.pais_o_region}</b><br>
                                Rt última semana: <b>{point.promedio}</b><br>
@@ -379,7 +395,7 @@ df_dptos %>%
   )
 ) -> millon_fallecidos 
 
-# evolucion diaria confiormados, fallecidos
+# evolucion diaria confirmados, fallecidos
 df_dptos %>% 
   filter(base == "confirmados") -> temp
 
@@ -424,11 +440,15 @@ df_dptos %>%
   filter(base == "confirmados") %>% 
   bind_rows(., bol_confirmados) %>% 
   group_by(pais_region, semana) %>% 
+  mutate(n = n()) %>% 
+  filter(n >= 6) %>% 
   summarise(
     incidencia = sum(incidencia)
   ) %>% 
   group_by(pais_region) %>% 
   mutate(total = sum(incidencia)) %>% 
+  mutate(n = n()) %>% 
+  filter(n >= 6) %>% 
   group_split(pais_region)  %>% 
   map(., ~(mutate(., ult_semana = pull(., incidencia) %>% last))) %>% 
   bind_rows() %>% 
@@ -462,10 +482,12 @@ temp %>%
   scale_fill_manual(values = c("#264653", "#E76F51")) -> curva_confirmados
 
 # aplanamiento de curvas confirmados
-df_dptos %>% 
+df_dptos %>%
   filter(base == "fallecidos") %>% 
   bind_rows(., bol_fallecidos) %>% 
   group_by(pais_region, semana) %>% 
+  mutate(n = n()) %>% 
+  filter(n >= 6) %>% 
   summarise(
     incidencia = sum(incidencia)
   ) %>% 
@@ -503,316 +525,3 @@ temp %>%
   ) + 
   scale_fill_manual(values = c("#264653", "#E76F51")) -> curva_fallecidos
 
-
-
-
-
-# # prevalencia confirmados
-# hchart(
-#   df_dptos %>% filter(base == "confirmados"),
-#   "line",
-#   hcaes(
-#     x = fecha, y = casos_acumulados, group = pais_region
-#   )
-# ) %>%
-#   hc_tooltip(table = T, shared = T, sort = T) %>%
-#   hc_xAxis(title = list(text = NULL)) %>%
-#   hc_yAxis(title = list(text = "Casos acumulados")) %>%
-#   hc_chart(style = list(fontFamily = "Source Code Pro")) %>%
-#   hc_title(text = "Casos confirmados acumulados por día") %>%
-#   hc_subtitle(text = "Desde confirmado '0' en cada departamento") %>%
-#   hc_colors(colors = colores) %>%
-#   hc_legend(layout = "proximate", align = "right") %>%
-#   hc_plotOptions(line = list(
-#     lineWidth = 3,
-#     connectNulls = F,
-#     animation = list(
-#       duration = 3000
-#     ),
-#     marker = list(
-#       enabled = F,
-#       symbol = "circle",
-#       radius = 2
-#     )
-#   )
-# ) 
-# 
-# # prevalencia fallecidos
-# hchart(
-#   df_dptos %>% filter(base == "fallecidos"),
-#   "line",
-#   hcaes(
-#     x = fecha, y = casos_acumulados, group = pais_region
-#   )
-# ) %>%
-#   hc_tooltip(table = T, shared = T) %>%
-#   hc_xAxis(title = list(text = NULL)) %>%
-#   hc_yAxis(title = list(text = "Nuevos casos por día")) %>%
-#   hc_chart(style = list(fontFamily = "Source Code Pro")) %>%
-#   hc_title(text = "Fallecidos acumulados por día") %>%
-#   hc_subtitle(text = "Desde fallecido '0' en cada departamento") %>%
-#   hc_colors(colors = ggthemes::tableau_color_pal()(9)) %>%
-#   hc_legend(layout = "proximate", align = "right") %>%
-#   hc_plotOptions(line = list(
-#     lineWidth = 3,
-#     connectNulls = F,
-#     animation = list(
-#       duration = 3000
-#     ),
-#     marker = list(
-#       enabled = F,
-#       symbol = "circle",
-#       radius = 2
-#     )
-#   )
-# ) -> hc3
-# 
-# # porcentaje confirmados
-# df_dptos %>%
-#   group_by(base, pais_region) %>%
-#   summarise(
-#     incidencia = sum(incidencia)
-#   ) %>%
-#   filter(base == "confirmados") %>%
-#   mutate(
-#     prop = prop.table(incidencia)*1000,
-#     prop = round(prop, 0),
-#     prop_1 = prop/10
-#   ) %>%
-#   hchart(
-#     "item",
-#     hcaes(name = pais_region, y = prop),
-#     marker = list(symbol = 'square'),
-#     showInLegend = TRUE,
-#     style = list(fontFamily = "Source Code Pro",
-#                  color = "black")
-#   ) %>%
-#   hc_tooltip(enabled = T, borderWidth = 0.01,
-#              pointFormat=paste("
-#                                Porcentaje de casos confirmados acumulados: <b>{point.prop_1} %</b><br>
-#                                Casos confirmados acumulados: <b>{point.incidencia}</b><br>"),
-#              style = list(fontFamily = "Source Code Pro",
-#                           color = "black")) %>%
-#   hc_colors(colors = ggthemes::tableau_color_pal()(9)) %>%
-#   hc_title(text = "Porcentaje de confirmados acumulados por departamento") -> hc4
-# 
-# 
-# # porcentaje fallecidos
-# df_dptos %>%
-#   group_by(base, pais_region) %>%
-#   summarise(
-#     incidencia = sum(incidencia)
-#   ) %>%
-#   filter(base == "fallecidos") %>%
-#   mutate(
-#     prop = prop.table(incidencia)*1000,
-#     prop = round(prop, 0),
-#     prop_1 = prop/10
-#   ) %>%
-#   hchart(
-#     "item",
-#     hcaes(name = pais_region, y = prop),
-#     marker = list(symbol = 'square'),
-#     showInLegend = TRUE,
-#     style = list(fontFamily = "Source Code Pro",
-#                  color = "black")
-#   ) %>%
-#   hc_tooltip(enabled = T, borderWidth = 0.01,
-#              pointFormat=paste("
-#                                Porcentaje de casos fallecidos acumulados: <b>{point.prop_1} %</b><br>
-#                                Casos fallecidos acumulados: <b>{point.incidencia}</b><br>"),
-#              style = list(fontFamily = "Source Code Pro",
-#                           color = "black")) %>%
-#   hc_colors(colors = ggthemes::tableau_color_pal()(9)) %>%
-#   hc_title(text = "Porcentaje de casos confirmados acumulados por departamento") -> hc5
-# 
-# # por millon confirmados
-# df_dptos %>%
-#   filter(base == "confirmados") %>%
-#   mutate(
-#     por_millon = casos_acumulados/poblacion *1000000,
-#     por_millon = round(por_millon, 0)
-#   ) %>%
-#   hchart(
-#     "line",
-#     hcaes(
-#       x = fecha, y = por_millon, group = pais_region
-#     )
-#   ) %>%
-#   hc_tooltip(table = T, shared = T, sort = T, outside = T, borderWidth = 0.01) %>%
-#   hc_xAxis(title = list(text = NULL)) %>%
-#   hc_yAxis(title = list(text = "Casos acumulados por millón de habitantes")) %>%
-#   hc_chart(style = list(fontFamily = "Source Code Pro")) %>%
-#   hc_title(text = "Casos confirmados por cada millón de habitantes") %>%
-#   hc_subtitle(text = "Desde confirmado '0' en cada departamento") %>%
-#   hc_colors(colors = colores) %>%
-#   hc_legend(layout = "proximate", align = "right") %>%
-#   hc_plotOptions(line = list(
-#     lineWidth = 3,
-#     connectNulls = F,
-#     animation = list(
-#       duration = 3000
-#     ),
-#     marker = list(
-#       enabled = F,
-#       symbol = "circle",
-#       radius = 2
-#     )
-#   )
-# ) -> hc6
-# 
-# 
-# # por millon fallecidos
-# df_dptos %>%
-#   filter(base == "fallecidos") %>%
-#   mutate(
-#     por_millon = casos_acumulados/poblacion *1000000,
-#     por_millon = round(por_millon, 0)
-#   ) %>%
-#   hchart(
-#     "line",
-#     hcaes(
-#       x = fecha, y = por_millon, group = pais_region
-#     )
-#   ) %>%
-#   hc_tooltip(table = T, shared = T, sort = T) %>%
-#   hc_legend(layout = "proximate", align = "right") %>%
-#   hc_xAxis(title = list(text = NULL)) %>%
-#   hc_yAxis(title = list(text = "Casos acumulados por millón de habitantes")) %>%
-#   hc_chart(style = list(fontFamily = "Source Code Pro")) %>%
-#   hc_title(text = "Casos fallecidos por cada millón de habitantes") %>%
-#   hc_subtitle(text = "Desde confirmado '0' en cada departamento") %>%
-#   hc_colors(colors = ggthemes::tableau_color_pal()(9)) %>%
-#   hc_legend(layout = "proximate", align = "right") %>%
-#   hc_colors(colors = ggthemes::tableau_color_pal()(9)) %>%
-#   hc_plotOptions(line = list(
-#     lineWidth = 3,
-#     connectNulls = F,
-#     animation = list(
-#       duration = 3000
-#     ),
-#     marker = list(
-#       enabled = F,
-#       symbol = "circle",
-#       radius = 2
-#     )
-#   )
-# ) -> hc7
-# 
-# # rt
-# 
-# df_dptos %>%
-#   group_split(base, pais_region)  -> temp
-# 
-# map(temp, epistim_intervalo_1) %>%
-#   bind_rows() -> temp
-# 
-# temp %>%
-#   filter(Base == "confirmados") %>%
-#   group_split(`País o Región`) %>%
-#   map(., ~arrange(., `Día de cierre`)) %>%
-#   map(., ~slice(., nrow(.))) %>%
-#   bind_rows() %>%
-#   arrange(Promedio) %>%
-#   janitor::clean_names() -> temp_1
-# 
-# highchart() %>%
-#   hc_add_series(data = temp_1, type = "errorbar",
-#                 hcaes(x = pais_o_region, low = limite_inferior, high = limite_superior),
-#                 color = "#CB1724",  id = "error",
-#                 stemWidth = 3,  whiskerLength = 0) %>%
-#   hc_add_series(data = temp_1, "scatter", hcaes(x = pais_o_region, y = promedio),
-#                 color = "#CB1724", name = "Rt", linkedTo = "error") %>%
-#   hc_chart(style = list(fontFamily = "Source Code Pro")) %>%
-#   hc_plotOptions(
-#     scatter = list(
-#       marker = list(radius = 5, enabled = T, symbol = "circle"),
-#       states = list(hover = list(halo = list(size = 1)))
-#     )
-#   ) %>%
-#   hc_xAxis(title = list(text = ""),
-#            categories = temp_1$pais_o_region) %>%
-#   hc_yAxis(title = list(text = "Rt"), min = 0,
-#            plotLines = list(
-#              list(label = list(text = "Objetivo"),
-#                   color = "#09283C",
-#                   width = 2,
-#                   value = 1))) %>%
-#   hc_tooltip(enabled = T, valueDecimals = 3, borderWidth = 0.01,
-#              pointFormat=paste("<b>{point.pais_nombre_corto}</b><br>
-#                                Rt última semana: <b>{point.promedio}</b><br>
-#                                Límite superior: <b>{point.limite_superior}</b><br>
-#                                Límite inferior: <b>{point.limite_inferior}</b><br>
-#                                Día de inicio de medición: <b>{point.dia_de_inicio}</b><br>
-#                                Día de cierre de medición: <b>{point.dia_de_cierre}</b><br>"),
-#              headerFormat = "<b>{point.pais_o_region}</b>") -> hc8
-# 
-# 
-# temp %>%
-#   filter(Base == "fallecidos") %>%
-#   group_split(`País o Región`) %>%
-#   map(., ~arrange(., `Día de cierre`)) %>%
-#   map(., ~slice(., nrow(.))) %>%
-#   bind_rows() %>%
-#   arrange(Promedio) %>%
-#   janitor::clean_names() -> temp_1
-# 
-# highchart() %>%
-#   hc_add_series(data = temp_1, type = "errorbar",
-#                 hcaes(x = pais_o_region, low = limite_inferior, high = limite_superior),
-#                 color = "#09283C",  id = "error",
-#                 stemWidth = 3,  whiskerLength = 0) %>%
-#   hc_add_series(data = temp_1, "scatter", hcaes(x = pais_o_region, y = promedio),
-#                 color = "#09283C", name = "Rt", linkedTo = "error") %>%
-#   hc_chart(style = list(fontFamily = "Source Code Pro")) %>%
-#   hc_plotOptions(
-#     scatter = list(
-#       marker = list(radius = 5, enabled = T, symbol = "circle"),
-#       states = list(hover = list(halo = list(size = 1)))
-#     )
-#   ) %>%
-#   hc_xAxis(title = list(text = "NULL"),
-#            categories = temp_1$pais_o_region) %>%
-#   hc_yAxis(title = list(text = "Rt"), min = 0,
-#            plotLines = list(
-#              list(label = list(text = "Objetivo"),
-#                   color = "#09283C",
-#                   width = 2,
-#                   value = 1))) %>%
-#   hc_tooltip(enabled = T, valueDecimals = 3, borderWidth = 0.01,
-#              pointFormat=paste("<b>{point.pais_nombre_corto}</b><br>
-#                                Rt última semana: <b>{point.promedio}</b><br>
-#                                Límite superior: <b>{point.limite_superior}</b><br>
-#                                Límite inferior: <b>{point.limite_inferior}</b><br>
-#                                Día de inicio de medición: <b>{point.dia_de_inicio}</b><br>
-#                                Día de cierre de medición: <b>{point.dia_de_cierre}</b><br>"),
-#              headerFormat = "<b>{point.pais_o_region}</b>") %>%
-#   hc_title(text = "Rt de la última semana por departamento en base a casos confirmados") -> hc9
-# 
-# # serie de tiempo Rt
-# df_dptos %>%
-#   group_split(base, pais_region) -> temp
-# 
-# # aplicar funciones: epistim_intervalo_1 == ICL
-# furrr::future_map(temp, epistim_intervalo_1, .progress = T) %>%
-#   bind_rows() %>%
-#   janitor::clean_names() %>%
-#   group_split(pais_o_region) -> temp_1
-# 
-# 
-# # ejecutar función para graficos
-# map(temp_1, rt_tiempo) -> graficos
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 
-# 

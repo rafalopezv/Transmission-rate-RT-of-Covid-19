@@ -1,7 +1,7 @@
 # sobre: funciones para cáluclo de Rt
 
 # -------------------------------------------------------------------
-# función sobre primedio == 6.48  y desviación estandar de == 3.83
+# función sobre promedio == 6.48  y desviación estandar de == 3.83
 # -------------------------------------------------------------------
 epistim_intervalo_1 <- function(.data) {
   .data %>% 
@@ -75,7 +75,6 @@ rt_tiempo <- function(.data) {
         lineWidth = 4
       )
     ) %>% 
-    hc_chart(style = list(fontFamily = "IBM Plex Mono")) %>% 
     hc_tooltip(enabled = T, valueDecimals = 3, borderWidth = 0.01,
                pointFormat=paste("<b>{point.pais_o_region}</b><br>
                                Rt: <b>{point.promedio}</b><br>
@@ -85,9 +84,15 @@ rt_tiempo <- function(.data) {
                                Día de cierre de medición: <b>{point.dia_de_cierre}</b><br>"), 
                headerFormat = "") %>% 
     hc_size(height = 170)  %>% 
-    hc_yAxis(title = list(text = "")) %>% 
+    hc_yAxis(title = list(text = ""), 
+             plotLines = list(
+                        list(label = list(text = "Rt = 1"),
+                             color = "#2F546B",
+                             width = 3,
+                             value = 1))) %>% 
     hc_xAxis(title = list(text = NULL)) %>% 
     hc_title(text = pais,
              align = "center") %>% 
+    hc_chart(style = list(fontFamily = "IBM Plex Mono")) %>% 
     hc_legend(visible = F)
 }

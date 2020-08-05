@@ -7,13 +7,13 @@
     "folds" : "",
     "hash" : "0",
     "id" : "D329711D",
-    "lastKnownWriteTime" : 1596056419,
-    "last_content_update" : 1596056419983,
+    "lastKnownWriteTime" : 1596573244,
+    "last_content_update" : 1596573244124,
     "path" : "~/Documents/covid_bolivia/limpieza_graficos.R",
     "project_path" : "limpieza_graficos.R",
     "properties" : {
-        "cursorPosition" : "37,108",
-        "scrollLine" : "27"
+        "cursorPosition" : "13,75",
+        "scrollLine" : "7"
     },
     "read_only" : false,
     "read_only_alternatives" : [

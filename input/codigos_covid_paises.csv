@@ -1,0 +1,189 @@
+country_region,region,continent,iso3c,income_group,pais_region,continente,region_es,grupo_ingreso,pais_nombre_corto
+Afghanistan,South Asia,Asia,AFG,Low income,Afganistán,Asia,Asia del Sur,Ingreso bajo,Afganistán
+Albania,Europe & Central Asia,Europe,ALB,Upper middle income,Albania,Europa,Europa y Asia Central,Ingreso medio alto,Albania
+Algeria,Middle East & North Africa,Africa,DZA,Upper middle income,Argelia,Africa,Oriente Medio y Africa del Norte,Ingreso medio alto,Argelia
+Andorra,Europe & Central Asia,Europe,AND,High income,Andorra,Europa,Europa y Asia Central,Ingreso alto,Andorra
+Angola,Sub-Saharan Africa,Africa,AGO,Lower middle income,Angola,Africa,Africa subsahariana,Ingreso medio bajo,Angola
+Antigua and Barbuda,Latin America & Caribbean,Americas,ATG,High income,Antigua y Barbuda,América,América Latina y el Caribe,Ingreso alto,Antigua y Barbuda
+Argentina,Latin America & Caribbean,Americas,ARG,Upper middle income,Argentina,América,América Latina y el Caribe,Ingreso medio alto,Argentina
+Armenia,Europe & Central Asia,Europe,ARM,Upper middle income,Armenia,Europa,Europa y Asia Central,Ingreso medio alto,Armenia
+Australia,East Asia & Pacific,Oceania,AUS,High income,Australia,Oceanía,Asia oriental y el Pacífico,Ingreso alto,Australia
+Austria,Europe & Central Asia,Europe,AUT,High income,Austria,Europa,Europa y Asia Central,Ingreso alto,Austria
+Azerbaijan,Europe & Central Asia,Asia,AZE,Upper middle income,Azerbaiyán,Asia,Europa y Asia Central,Ingreso medio alto,Azerbaiyán
+Bahamas,Latin America & Caribbean,Americas,BHS,High income,Bahamas,América,América Latina y el Caribe,Ingreso alto,Bahamas
+Bahrain,Middle East & North Africa,Asia,BHR,High income,Bahrein,Asia,Oriente Medio y Africa del Norte,Ingreso alto,Bahrein
+Bangladesh,South Asia,Asia,BGD,Lower middle income,Bangladesh,Asia,Asia del Sur,Ingreso medio bajo,Bangladesh
+Barbados,Latin America & Caribbean,Americas,BRB,High income,Barbados,América,América Latina y el Caribe,Ingreso alto,Barbados
+Belarus,Europe & Central Asia,Europe,BLR,Upper middle income,Belarús,Europa,Europa y Asia Central,Ingreso medio alto,Belarús
+Belgium,Europe & Central Asia,Europe,BEL,High income,Bélgica,Europa,Europa y Asia Central,Ingreso alto,Bélgica
+Belize,Latin America & Caribbean,Americas,BLZ,Upper middle income,Belice,América,América Latina y el Caribe,Ingreso medio alto,Belice
+Benin,Sub-Saharan Africa,Africa,BEN,Low income,Benin,Africa,Africa subsahariana,Ingreso bajo,Benin
+Bolivia,Latin America & Caribbean,Americas,BOL,Lower middle income,Bolivia (Estado Plurinacional de),América,América Latina y el Caribe,Ingreso medio bajo,Bolivia
+Bosnia and Herzegovina,Europe & Central Asia,Europe,BIH,Upper middle income,Bosnia y Herzegovina,Europa,Europa y Asia Central,Ingreso medio alto,Bosnia y Herzegovina
+Botswana,Sub-Saharan Africa,Africa,BWA,Upper middle income,Botswana,Africa,Africa subsahariana,Ingreso medio alto,Botswana
+Brazil,Latin America & Caribbean,Americas,BRA,Upper middle income,Brasil,América,América Latina y el Caribe,Ingreso medio alto,Brasil
+Brunei,South Asia,Asia,BRN,High income,Brunei Darussalam,Asia,Asia del Sur,Ingreso alto,Brunei Darussalam
+Bulgaria,Europe & Central Asia,Europe,BGR,Upper middle income,Bulgaria,Europa,Europa y Asia Central,Ingreso medio alto,Bulgaria
+Burkina Faso,Sub-Saharan Africa,Africa,BFA,Low income,Burkina Faso,Africa,Africa subsahariana,Ingreso bajo,Burkina Faso
+Burma,South Asia,Asia,MMR,Lower middle income,Myanmar,Asia,Asia del Sur,Ingreso medio bajo,Myanmar
+Burundi,Sub-Saharan Africa,Africa,BDI,Low income,Burundi,Africa,Africa subsahariana,Ingreso bajo,Burundi
+Cabo Verde,Sub-Saharan Africa,Africa,CPV,Lower middle income,Cabo Verde,Africa,Africa subsahariana,Ingreso medio bajo,Cabo Verde
+Cameroon,Sub-Saharan Africa,Africa,CMR,Lower middle income,Camerún,Africa,Africa subsahariana,Ingreso medio bajo,Camerún
+Canada,North America,Americas,CAN,High income,Canadá,América,América del Norte,Ingreso alto,Canadá
+Central African Republic,Sub-Saharan Africa,Africa,CAF,Low income,República Centroafricana,Africa,Africa subsahariana,Ingreso bajo,R. Centroafricana
+Chad,Sub-Saharan Africa,Africa,TCD,Low income,Chad,Africa,Africa subsahariana,Ingreso bajo,Chad
+Chile,Latin America & Caribbean,Americas,CHL,High income,Chile,América,América Latina y el Caribe,Ingreso alto,Chile
+China,East Asia & Pacific,Asia,CHN,Upper middle income,China,Asia,Asia oriental y el Pacífico,Ingreso medio alto,China
+Colombia,Latin America & Caribbean,Americas,COL,Upper middle income,Colombia,América,América Latina y el Caribe,Ingreso medio alto,Colombia
+Comoros,Sub-Saharan Africa,Africa,COM,Lower middle income,Comoras,Africa,Africa subsahariana,Ingreso medio bajo,Comoras
+Congo (Brazzaville),Sub-Saharan Africa,Africa,COG,Lower middle income,Congo,Africa,Africa subsahariana,Ingreso medio bajo,Congo
+Congo (Kinshasa),Sub-Saharan Africa,Africa,COD,Low income,República Democrática del Congo,Africa,Africa subsahariana,Ingreso bajo,R.D. Congo
+Costa Rica,Latin America & Caribbean,Americas,CRI,Upper middle income,Costa Rica,América,América Latina y el Caribe,Ingreso medio alto,Costa Rica
+Cote d'Ivoire,Sub-Saharan Africa,Africa,CIV,Lower middle income,Côte d'Ivoire,Africa,Africa subsahariana,Ingreso medio bajo,Côte d'Ivoire
+Croatia,Europe & Central Asia,Europe,HRV,High income,Croacia,Europa,Europa y Asia Central,Ingreso alto,Croacia
+Cuba,Latin America & Caribbean,Americas,CUB,Upper middle income,Cuba,América,América Latina y el Caribe,Ingreso medio alto,Cuba
+Cyprus,Europe & Central Asia,Europe,CYP,High income,Chipre,Europa,Europa y Asia Central,Ingreso alto,Chipre
+Czechia,Europe & Central Asia,Europe,CZE,High income,República Checa,Europa,Europa y Asia Central,Ingreso alto,República Checa
+Denmark,Europe & Central Asia,Europe,DNK,High income,Dinamarca,Europa,Europa y Asia Central,Ingreso alto,Dinamarca
+Djibouti,Middle East & North Africa,Africa,DJI,Lower middle income,Djibouti,Africa,Oriente Medio y Africa del Norte,Ingreso medio bajo,Djibouti
+Dominican Republic,Latin America & Caribbean,Americas,DOM,Upper middle income,República Dominicana,América,América Latina y el Caribe,Ingreso medio alto,República Dominicana
+Ecuador,Latin America & Caribbean,Americas,ECU,Upper middle income,Ecuador,América,América Latina y el Caribe,Ingreso medio alto,Ecuador
+Egypt,Middle East & North Africa,Africa,EGY,Lower middle income,Egipto,Africa,Oriente Medio y Africa del Norte,Ingreso medio bajo,Egipto
+El Salvador,Latin America & Caribbean,Americas,SLV,Lower middle income,El Salvador,América,América Latina y el Caribe,Ingreso medio bajo,El Salvador
+Equatorial Guinea,Sub-Saharan Africa,Africa,GNQ,Upper middle income,Guinea Ecuatorial,Africa,Africa subsahariana,Ingreso medio alto,Guinea Ecuatorial
+Estonia,Europe & Central Asia,Europe,EST,High income,Estonia,Europa,Europa y Asia Central,Ingreso alto,Estonia
+Eswatini,Sub-Saharan Africa,Africa,SWZ,Lower middle income,Swazilandia,Africa,Africa subsahariana,Ingreso medio bajo,Swazilandia
+Ethiopia,Sub-Saharan Africa,Africa,ETH,Low income,Etiopía,Africa,Africa subsahariana,Ingreso bajo,Etiopía
+Finland,Europe & Central Asia,Europe,FIN,High income,Finlandia,Europa,Europa y Asia Central,Ingreso alto,Finlandia
+France,Europe & Central Asia,Europe,FRA,High income,Francia,Europa,Europa y Asia Central,Ingreso alto,Francia
+Gabon,Sub-Saharan Africa,Africa,GAB,Upper middle income,Gabón,Africa,Africa subsahariana,Ingreso medio alto,Gabón
+Gambia,Sub-Saharan Africa,Africa,GMB,Low income,Gambia (República de),Africa,Africa subsahariana,Ingreso bajo,Gambia
+Georgia,Europe & Central Asia,Europe,GEO,Upper middle income,Georgia,Europa,Europa y Asia Central,Ingreso medio alto,Georgia
+Germany,Europe & Central Asia,Europe,DEU,High income,Alemania,Europa,Europa y Asia Central,Ingreso alto,Alemania
+Ghana,Sub-Saharan Africa,Africa,GHA,Lower middle income,Ghana,Africa,Africa subsahariana,Ingreso medio bajo,Ghana
+Greece,Europe & Central Asia,Europe,GRC,High income,Grecia,Europa,Europa y Asia Central,Ingreso alto,Grecia
+Guatemala,Latin America & Caribbean,Americas,GTM,Upper middle income,Guatemala,América,América Latina y el Caribe,Ingreso medio alto,Guatemala
+Guinea,Sub-Saharan Africa,Africa,GIN,Low income,Guinea,Africa,Africa subsahariana,Ingreso bajo,Guinea
+Guinea-Bissau,Sub-Saharan Africa,Africa,GNB,Low income,Guinea Bissau,Africa,Africa subsahariana,Ingreso bajo,Guinea Bissau
+Guyana,Latin America & Caribbean,Americas,GUY,Upper middle income,Guyana,América,América Latina y el Caribe,Ingreso medio alto,Guyana
+Haiti,Latin America & Caribbean,Americas,HTI,Low income,Haití,América,América Latina y el Caribe,Ingreso bajo,Haití
+Honduras,Latin America & Caribbean,Americas,HND,Lower middle income,Honduras,América,América Latina y el Caribe,Ingreso medio bajo,Honduras
+"Hong Kong SAR, China",East Asia & Pacific,Asia,HKG,High income,Hong Kong,Asia,Asia oriental y el Pacífico,Ingreso alto,Hong Kong
+Hungary,Europe & Central Asia,Europe,HUN,High income,Hungría,Europa,Europa y Asia Central,Ingreso alto,Hungría
+Iceland,Europe & Central Asia,Europe,ISL,High income,Islandia,Europa,Europa y Asia Central,Ingreso alto,Islandia
+India,South Asia,Asia,IND,Lower middle income,India,Asia,Asia del Sur,Ingreso medio bajo,India
+Indonesia,East Asia & Pacific,Asia,IDN,Lower middle income,Indonesia,Asia,Asia oriental y el Pacífico,Ingreso medio bajo,Indonesia
+Iran,Middle East & North Africa,Asia,IRN,Upper middle income,Irán (República Islámica del),Asia,Oriente Medio y Africa del Norte,Ingreso medio alto,Irán
+Iraq,Middle East & North Africa,Asia,IRQ,Upper middle income,Iraq,Asia,Oriente Medio y Africa del Norte,Ingreso medio alto,Iraq
+Ireland,Europe & Central Asia,Europe,IRL,High income,Irlanda,Europa,Europa y Asia Central,Ingreso alto,Irlanda
+Israel,Middle East & North Africa,Asia,ISR,High income,Israel,Asia,Oriente Medio y Africa del Norte,Ingreso alto,Israel
+Italy,Europe & Central Asia,Europe,ITA,High income,Italia,Europa,Europa y Asia Central,Ingreso alto,Italia
+Jamaica,Latin America & Caribbean,Americas,JAM,Upper middle income,Jamaica,América,América Latina y el Caribe,Ingreso medio alto,Jamaica
+Japan,East Asia & Pacific,Asia,JPN,High income,Japón,Asia,Asia oriental y el Pacífico,Ingreso alto,Japón
+Jordan,Middle East & North Africa,Asia,JOR,Upper middle income,Jordania,Asia,Oriente Medio y Africa del Norte,Ingreso medio alto,Jordania
+Kazakhstan,Europe & Central Asia,Asia,KAZ,Upper middle income,Kazajstán,Asia,Europa y Asia Central,Ingreso medio alto,Kazajstán
+Kenya,Sub-Saharan Africa,Africa,KEN,Lower middle income,Kenya,Africa,Africa subsahariana,Ingreso medio bajo,Kenya
+"Korea, South",East Asia & Pacific,Asia,KOR,High income,República de Corea,Asia,Asia oriental y el Pacífico,Ingreso alto,Corea	del Sur
+Kosovo,Europe & Central Asia,Europe,RKS,NA,Kosovo,Europa,Europa y Asia Central,NA,Kosovo
+Kuwait,Middle East & North Africa,Asia,KWT,High income,Kuwait,Asia,Oriente Medio y Africa del Norte,Ingreso alto,Kuwait
+Kyrgyzstan,Europe & Central Asia,Asia,KGZ,Lower middle income,Kirguistán,Asia,Europa y Asia Central,Ingreso medio bajo,Kirguistán
+Latvia,Europe & Central Asia,Europe,LVA,High income,Letonia,Europa,Europa y Asia Central,Ingreso alto,Letonia
+Lebanon,Middle East & North Africa,Asia,LBN,Upper middle income,Líbano,Asia,Oriente Medio y Africa del Norte,Ingreso medio alto,Líbano
+Liberia,Sub-Saharan Africa,Africa,LBR,Low income,Liberia,Africa,Africa subsahariana,Ingreso bajo,Liberia
+Libya,Middle East & North Africa,Africa,LBY,Upper middle income,Libia,Africa,Oriente Medio y Africa del Norte,Ingreso medio alto,Libia
+Liechtenstein,Europe & Central Asia,Europe,LIE,High income,Liechtenstein,Europa,Europa y Asia Central,Ingreso alto,Liechtenstein
+Lithuania,Europe & Central Asia,Europe,LTU,High income,Lituania,Europa,Europa y Asia Central,Ingreso alto,Lituania
+Luxembourg,Europe & Central Asia,Europe,LUX,High income,Luxemburgo,Europa,Europa y Asia Central,Ingreso alto,Luxemburgo
+Madagascar,Sub-Saharan Africa,Africa,MDG,Low income,Madagascar,Africa,Africa subsahariana,Ingreso bajo,Madagascar
+Malawi,Sub-Saharan Africa,Africa,MWI,Low income,Malawi,Africa,Africa subsahariana,Ingreso bajo,Malawi
+Malaysia,East Asia & Pacific,Asia,MYS,Upper middle income,Malasia,Asia,Asia oriental y el Pacífico,Ingreso medio alto,Malasia
+Maldives,South Asia,Asia,MDV,Upper middle income,Maldivas,Asia,Asia del Sur,Ingreso medio alto,Maldivas
+Mali,Sub-Saharan Africa,Africa,MLI,Low income,Malí,Africa,Africa subsahariana,Ingreso bajo,Malí
+Malta,Middle East & North Africa,Europe,MLT,High income,Malta,Europa,Oriente Medio y Africa del Norte,Ingreso alto,Malta
+Mauritania,Sub-Saharan Africa,Africa,MRT,Lower middle income,Mauritania,Africa,Africa subsahariana,Ingreso medio bajo,Mauritania
+Mauritius,Sub-Saharan Africa,Africa,MUS,Upper middle income,Mauricio,Africa,Africa subsahariana,Ingreso medio alto,Mauricio
+Mexico,Latin America & Caribbean,Americas,MEX,Upper middle income,México,América,América Latina y el Caribe,Ingreso medio alto,México
+Moldova,Europe & Central Asia,Europe,MDA,Lower middle income,República de Moldova,Europa,Europa y Asia Central,Ingreso medio bajo,Moldova
+Monaco,Europe & Central Asia,Europe,MCO,High income,Mónaco,Europa,Europa y Asia Central,Ingreso alto,Mónaco
+Montenegro,Europe & Central Asia,Europe,MNE,Upper middle income,Montenegro,Europa,Europa y Asia Central,Ingreso medio alto,Montenegro
+Morocco,Middle East & North Africa,Africa,MAR,Lower middle income,Marruecos,Africa,Oriente Medio y Africa del Norte,Ingreso medio bajo,Marruecos
+Mozambique,Sub-Saharan Africa,Africa,MOZ,Low income,Mozambique,Africa,Africa subsahariana,Ingreso bajo,Mozambique
+Nepal,South Asia,Asia,NPL,Low income,Nepal,Asia,Asia del Sur,Ingreso bajo,Nepal
+Netherlands,Europe & Central Asia,Africa,NLD,High income,Países Bajos,Africa,Europa y Asia Central,Ingreso alto,Países Bajos
+New Zealand,East Asia & Pacific,Oceania,NZL,High income,Nueva Zelandia,Oceanía,Asia oriental y el Pacífico,Ingreso alto,Nueva Zelandia
+Nicaragua,Latin America & Caribbean,Americas,NIC,Lower middle income,Nicaragua,América,América Latina y el Caribe,Ingreso medio bajo,Nicaragua
+Niger,Sub-Saharan Africa,Africa,NER,Low income,Niger,Africa,Africa subsahariana,Ingreso bajo,Niger
+Nigeria,Sub-Saharan Africa,Africa,NGA,Lower middle income,Nigeria,Africa,Africa subsahariana,Ingreso medio bajo,Nigeria
+North Macedonia,Europe & Central Asia,Europe,MKD,Upper middle income,ex República Yugoslava de Macedonia,Europa,Europa y Asia Central,Ingreso medio alto,Macedonia
+Norway,Europe & Central Asia,Europe,NOR,High income,Noruega,Europa,Europa y Asia Central,Ingreso alto,Noruega
+Oman,Middle East & North Africa,Asia,OMN,High income,Omán,Asia,Oriente Medio y Africa del Norte,Ingreso alto,Omán
+Pakistan,South Asia,Asia,PAK,Lower middle income,Pakistán,Asia,Asia del Sur,Ingreso medio bajo,Pakistán
+Panama,Latin America & Caribbean,Americas,PAN,High income,Panamá,América,América Latina y el Caribe,Ingreso alto,Panamá
+Paraguay,Latin America & Caribbean,Americas,PRY,Upper middle income,Paraguay,América,América Latina y el Caribe,Ingreso medio alto,Paraguay
+Peru,Latin America & Caribbean,Americas,PER,Upper middle income,Perú,América,América Latina y el Caribe,Ingreso medio alto,Perú
+Philippines,East Asia & Pacific,Asia,PHL,Lower middle income,Filipinas,Asia,Asia oriental y el Pacífico,Ingreso medio bajo,Filipinas
+Poland,Europe & Central Asia,Europe,POL,High income,Polonia,Europa,Europa y Asia Central,Ingreso alto,Polonia
+Portugal,Europe & Central Asia,Europe,PRT,High income,Portugal,Europa,Europa y Asia Central,Ingreso alto,Portugal
+Qatar,Middle East & North Africa,Asia,QAT,High income,Qatar,Asia,Oriente Medio y Africa del Norte,Ingreso alto,Qatar
+Romania,Europe & Central Asia,Europe,ROU,Upper middle income,Rumania,Europa,Europa y Asia Central,Ingreso medio alto,Rumania
+Russia,Europe & Central Asia,Europe,RUS,Upper middle income,Federación de Rusia,Europa,Europa y Asia Central,Ingreso medio alto,Rusia
+Rwanda,Sub-Saharan Africa,Africa,RWA,Low income,Rwanda,Africa,Africa subsahariana,Ingreso bajo,Rwanda
+San Marino,Europe & Central Asia,Europe,SMR,High income,San Marino,Europa,Europa y Asia Central,Ingreso alto,San Marino
+Sao Tome and Principe,Sub-Saharan Africa,Africa,STP,Lower middle income,Santo Tomé y Príncipe,Africa,Africa subsahariana,Ingreso medio bajo,Santo Tomé y Príncipe
+Saudi Arabia,Middle East & North Africa,Asia,SAU,High income,Arabia Saudita,Asia,Oriente Medio y Africa del Norte,Ingreso alto,Arabia Saudita
+Senegal,Sub-Saharan Africa,Africa,SEN,Lower middle income,Senegal,Africa,Africa subsahariana,Ingreso medio bajo,Senegal
+Serbia,Europe & Central Asia,Europe,SRB,Upper middle income,Serbia,Europa,Europa y Asia Central,Ingreso medio alto,Serbia
+Sierra Leone,Sub-Saharan Africa,Africa,SLE,Low income,Sierra Leona,Africa,Africa subsahariana,Ingreso bajo,Sierra Leona
+Singapore,East Asia & Pacific,Asia,SGP,High income,Singapur,Asia,Asia oriental y el Pacífico,Ingreso alto,Singapur
+Slovakia,Europe & Central Asia,Europe,SNK,NA,Eslovaquia,Europa,Europa y Asia Central,NA,Eslovaquia
+Slovenia,Europe & Central Asia,Europe,SVN,High income,Eslovenia,Europa,Europa y Asia Central,Ingreso alto,Eslovenia
+Somalia,Sub-Saharan Africa,Africa,SOM,Low income,Somalia,Africa,Africa subsahariana,Ingreso bajo,Somalia
+South Africa,Sub-Saharan Africa,Africa,ZAF,Upper middle income,Sudáfrica,Africa,Africa subsahariana,Ingreso medio alto,Sudáfrica
+South Sudan,Sub-Saharan Africa,Africa,SSD,Low income,Sudán del Sur,Africa,Africa subsahariana,Ingreso bajo,Sudán del Sur
+Spain,Europe & Central Asia,Europe,ESP,High income,España,Europa,Europa y Asia Central,Ingreso alto,España
+Sri Lanka,South Asia,Asia,LKA,Upper middle income,Sri Lanka,Asia,Asia del Sur,Ingreso medio alto,Sri Lanka
+Sudan,Sub-Saharan Africa,Africa,SDN,Lower middle income,Sudán,Africa,Africa subsahariana,Ingreso medio bajo,Sudán
+Suriname,Latin America & Caribbean,Americas,SUR,Upper middle income,Suriname,América,América Latina y el Caribe,Ingreso medio alto,Suriname
+Sweden,Europe & Central Asia,Europe,SWE,High income,Suecia,Europa,Europa y Asia Central,Ingreso alto,Suecia
+Switzerland,Europe & Central Asia,Europe,CHE,High income,Suiza,Europa,Europa y Asia Central,Ingreso alto,Suiza
+Syria,Middle East & North Africa,Asia,SYR,Low income,República Árabe Siria,Asia,Oriente Medio y Africa del Norte,Ingreso bajo,Siria
+Taiwan*,East Asia & Pacific,Asia,TWN,NA,Taiwán,Asia,Asia oriental y el Pacífico,NA,Taiwán
+Tajikistan,Europe & Central Asia,Asia,TJK,Low income,Tayikistán,Asia,Europa y Asia Central,Ingreso bajo,Tayikistán
+Tanzania,Sub-Saharan Africa,Africa,TZA,Low income,República Unida de Tanzanía,Africa,Africa subsahariana,Ingreso bajo,Tanzania
+Thailand,East Asia & Pacific,Asia,THA,Upper middle income,Tailandia,Asia,Asia oriental y el Pacífico,Ingreso medio alto,Tailandia
+Togo,Sub-Saharan Africa,Africa,TGO,Low income,Togo,Africa,Africa subsahariana,Ingreso bajo,Togo
+Trinidad and Tobago,Latin America & Caribbean,Americas,TTO,High income,Trinidad y Tobago,América,América Latina y el Caribe,Ingreso alto,Trinidad y Tobago
+Tunisia,Middle East & North Africa,Africa,TUN,Lower middle income,Túnez,Africa,Oriente Medio y Africa del Norte,Ingreso medio bajo,Túnez
+Turkey,Europe & Central Asia,Asia,TUR,Upper middle income,Turquía,Asia,Europa y Asia Central,Ingreso medio alto,Turquía
+Ukraine,Europe & Central Asia,Europe,UKR,Lower middle income,Ucrania,Europa,Europa y Asia Central,Ingreso medio bajo,Ucrania
+United Arab Emirates,Middle East & North Africa,Asia,ARE,High income,Emiratos Árabes Unidos,Asia,Oriente Medio y Africa del Norte,Ingreso alto,Emiratos Árabes Unidos
+United Kingdom,Europe & Central Asia,Europe,GBR,High income,Reino Unido de Gran Bretaña e Irlanda del Norte,Europa,Europa y Asia Central,Ingreso alto,Reino Unido
+Uruguay,Latin America & Caribbean,Americas,URY,High income,Uruguay,América,América Latina y el Caribe,Ingreso alto,Uruguay
+US,North America,Americas,USA,High income,Estados Unidos de América,América,América del Norte,Ingreso alto,Estados Unidos
+Uzbekistan,Europe & Central Asia,Asia,UZB,Lower middle income,Uzbekistán,Asia,Europa y Asia Central,Ingreso medio bajo,Uzbekistán
+Venezuela,Latin America & Caribbean,Americas,VEN,Upper middle income,Venezuela (República Bolivariana de),América,América Latina y el Caribe,Ingreso medio alto,Venezuela
+West Bank and Gaza,Middle East & North Africa,Asia,PSE,Lower middle income,Cisjordania y Gaza,Asia,Oriente Medio y Africa del Norte,Ingreso medio bajo,Cisjordania y Gaza
+Western Sahara,Middle East & North Africa,Africa,ESH,NA,Sahara Occidental,Africa,Oriente Medio y Africa del Norte,NA,Sahara Occidental
+Yemen,Middle East & North Africa,Asia,YEM,Low income,Yemen,Asia,Oriente Medio y Africa del Norte,Ingreso bajo,Yemen
+Zambia,Sub-Saharan Africa,Africa,ZMB,Lower middle income,Zambia,Africa,Africa subsahariana,Ingreso medio bajo,Zambia
+Zimbabwe,Sub-Saharan Africa,Africa,ZWE,Lower middle income,Zimbabwe,Africa,Africa subsahariana,Ingreso medio bajo,Zimbabwe
+Bhutan,South Asia,Asia,BTN,Lower middle income,Bhután,Asia,Asia del Sur,Ingreso medio bajo,Bhután
+Cambodia,East Asia & Pacific,Asia,KHM,Lower middle income,Camboya,Asia,Asia oriental y el Pacífico,Ingreso medio bajo,Camboya
+Dominica,Latin America & Caribbean,Americas,DMA,Upper middle income,Dominica,América,América Latina y el Caribe,Ingreso medio alto,Dominica
+Eritrea,Sub-Saharan Africa,Africa,ERI,Low income,Eritrea,Africa,Africa subsahariana,Ingreso bajo,Eritrea
+Fiji,East Asia & Pacific,Oceania,FJI,Upper middle income,Fiji,Oceanía,Asia oriental y el Pacífico,Ingreso medio alto,Fiji
+Grenada,Latin America & Caribbean,Americas,GRD,Upper middle income,Granada,América,América Latina y el Caribe,Ingreso medio alto,Granada
+Holy See,Europe & Central Asia,Europe,VAT,NA,Vaticano,Europa,Europa y Asia Central,NA,Vaticano
+Laos,East Asia & Pacific,Asia,LAO,Lower middle income,República Democrática Popular Lao,Asia,Asia oriental y el Pacífico,Ingreso medio bajo,Laos
+Lesotho,Sub-Saharan Africa,Africa,LSO,Lower middle income,Lesotho,Africa,Africa subsahariana,Ingreso medio bajo,Lesotho
+"Macao SAR, China",East Asia & Pacific,Asia,MAC,High income,Macao SAR,Asia,Asia oriental y el Pacífico,Ingreso alto,Macao SAR
+Mongolia,East Asia & Pacific,Asia,MNG,Lower middle income,Mongolia,Asia,Asia oriental y el Pacífico,Ingreso medio bajo,Mongolia
+Namibia,Sub-Saharan Africa,Africa,NAM,Upper middle income,Namibia,Africa,Africa subsahariana,Ingreso medio alto,Namibia
+Papua New Guinea,East Asia & Pacific,Oceania,PNG,Lower middle income,Papua Nueva Guinea,Oceanía,Asia oriental y el Pacífico,Ingreso medio bajo,Papua Nueva Guinea
+Saint Kitts and Nevis,Latin America & Caribbean,Americas,KNA,High income,Saint Kitts y Nevis,América,América Latina y el Caribe,Ingreso alto,Saint Kitts y Nevis
+Saint Lucia,Latin America & Caribbean,Americas,LCA,Upper middle income,Santa Lucía,América,América Latina y el Caribe,Ingreso medio alto,Santa Lucía
+Saint Vincent and the Grenadines,Latin America & Caribbean,Americas,VCT,Upper middle income,San Vicente y las Granadinas,América,América Latina y el Caribe,Ingreso medio alto,San Vicente y las Granadinas
+Seychelles,Sub-Saharan Africa,Africa,SYC,High income,Seychelles,Africa,Africa subsahariana,Ingreso alto,Seychelles
+Timor-Leste,East Asia & Pacific,Asia,TLS,Lower middle income,Timor-Leste,Asia,Asia oriental y el Pacífico,Ingreso medio bajo,Timor-Leste
+Uganda,Sub-Saharan Africa,Africa,UGA,Low income,Uganda,Africa,Africa subsahariana,Ingreso bajo,Uganda
+Vietnam,East Asia & Pacific,Asia,VNM,Lower middle income,Viet Nam,Asia,Asia oriental y el Pacífico,Ingreso medio bajo,Viet Nam

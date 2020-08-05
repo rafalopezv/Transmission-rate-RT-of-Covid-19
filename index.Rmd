@@ -24,6 +24,8 @@ Sys.setlocale(locale = "es_ES.UTF-8")
 <br>
 En esta sección se presenta el cálculo semanal del Número de Reproducción Efectivo dependiente del tiempo (Rt) para Bolivia y sus 9 Departamentos. El cálculo se actualiza cada semana y se efectúa con base en el reporte oficial de personas fallecidas, en lugar de hacerlo con el número de personas infectadas. Lo anterior permite reducir el “ruido estadístico” que suele producirse a causa de las variaciones en el número de los test que se realizan, la demora en los resultados de los test, y/o cambios en el protocolo de los test. 
 
+Para el calculó del Rt, el inicio de la semana está dado por el reporte del primer fallecido en cada departamento. Desde allí, cada semana se comprende como los 7 días siguientes.
+
 En nuestro caso, Rt muestra la velocidad de propagación semanal del virus. Un Rt=1, muestra que durante esa semana la epidemia no creció exponencialmente y se estabilizó; un Rt <1, sugiere que en esa semana la epidemia estuvo en declive y bajo “control”, y un Rt> 1 sugiere que en la semana la epidemia tuvo un crecimiento exponencial y puede considerarse “fuera de control”. En la pandemia actual, se debe mirar hacia Rt para evaluar la transmisión viral, lo que importa es obtener un Rt < 1 de forma consistente, semana tras semana, hasta extinguir la epidemia.
 
 ¿Cuál es la diferencia entre R0 y Rt? Mientras que R0 describe el potencial de propagación inicial de una infección en una población completamente susceptible, el número reproductivo efectivo, Rt, captura la transmisión una vez que el virus se propaga y a medida que se inician las medidas de contención
@@ -82,14 +84,110 @@ evolucion_confirmados
 <center><h1>¿Se están aplanando las curvas?</h1></center>
 <center>Nuevos infectados confirmados por semana</center>
 ```{r, include=T, echo = F,  fig.height = 15, fig.width = 20}
-curva_confirmados
+curva_fallecidos
 ```
 <br>
 <br>
 <center><h1>¿Se están aplanando las curvas?</h1></center>
 <center>Nuevos fallecidos por semana</center>
 ```{r, include=T, echo = F,  fig.height = 15, fig.width = 20}
-curva_fallecidos
+curva_confirmados
+```
+<center><h1>Tablas<h1></center>
+<br>
+<br>
+Aquí encuentra tablas que comparan todos los indicadores y datos antes descritos pero en formato de tabla. Puede filtrar y buscar en cada columna. 
+<br>
+<center><h3>Tabla del mundo: 188 países actualizados diariamente<h3></center>
+```{r, echo=F, warning=F, message=F}
+library(reactable)
+codigos <- read_csv("input/codigos_covid_paises.csv")
+codigos %<>% select(pais_region = country_region, pais_nombre_corto)
+
+
+df_mundo %>%
+  merge(., codigos, all.x = T) %>% 
+  mutate(
+    "Infectados/Fallecidos por millón de habitates" = casos_acumulados/poblacion * 1000000,
+    "Infectados/Fallecidos por millón de habitates" = round(`Infectados/Fallecidos por millón de habitates`, 0), 
+    base = str_to_title(base)
+  ) %>% 
+  select(
+    `País` = pais_nombre_corto, `Medición` = base, Fecha = fecha, `Total semanas desde paciente 0` =
+      total_semanas,  `Infectados/Fallecidos por millón de habitates`, `Casos Acumulados` = casos_acumulados, 
+    `Nuevos casos` = incidencia
+  ) %>% 
+  arrange(`País`, desc(Fecha)) %>% 
+  reactable(groupBy = c("País", "Medición"),
+            language = reactableLang(
+              searchPlaceholder = "Buscar país...",
+              noData = "No fue encontrado",
+              pageInfo = "{rowStart} - {rowEnd} de {rows} filas",
+              pagePrevious = "\u276e",
+              pageNext = "\u276f",
+              pagePreviousLabel = "Anterior",
+              pageNextLabel = "Siguiente"
+  ),
+          searchable = TRUE,
+          striped = TRUE,
+          highlight = TRUE,
+          bordered = TRUE,
+          theme = reactableTheme(
+            borderColor = "#dfe2e5",
+            stripedColor = "#f6f8fa",
+            highlightColor = "#f0f5f9",
+            cellPadding = "8px 12px",
+            style = list(
+              fontFamily = "Source Code Pro",
+              fontSize = "14px"
+            ),
+            searchInputStyle = list(width = "100%")
+            )
+)
+```
+<br>
+<br>
+<center><h3>Tabla de departamentos de Bolivia: actualizados diariamente<h3></center>
+```{r, echo=F, warning=F, message=F}
+df_dptos %>%
+  merge(., codigos, all.x = T) %>% 
+  mutate(
+    "Infectados/Fallecidos por millón de habitates" = casos_acumulados/poblacion * 1000000,
+    "Infectados/Fallecidos por millón de habitates" = round(`Infectados/Fallecidos por millón de habitates`, 0), 
+    base = str_to_title(base)
+  ) %>% 
+  select(
+    `Departamento` = pais_region, `Medición` = base, Fecha = fecha, `Total semanas desde acceso a datos` =
+      total_semanas,  `Infectados/Fallecidos por millón de habitates`, `Casos Acumulados` = casos_acumulados, 
+    `Nuevos casos` = incidencia
+  ) %>% 
+  arrange(`Departamento`, desc(Fecha)) %>% 
+  reactable(groupBy = c("Departamento", "Medición"),
+            language = reactableLang(
+              searchPlaceholder = "Buscar departamento",
+              noData = "No fue encontrado",
+              pageInfo = "{rowStart} - {rowEnd} de {rows} filas",
+              pagePrevious = "\u276e",
+              pageNext = "\u276f",
+              pagePreviousLabel = "Anterior",
+              pageNextLabel = "Siguiente"
+  ),
+          searchable = TRUE,
+          striped = TRUE,
+          highlight = TRUE,
+          bordered = TRUE,
+          theme = reactableTheme(
+            borderColor = "#dfe2e5",
+            stripedColor = "#f6f8fa",
+            highlightColor = "#f0f5f9",
+            cellPadding = "8px 12px",
+            style = list(
+              fontFamily = "Source Code Pro",
+              fontSize = "14px"
+            ),
+            searchInputStyle = list(width = "100%")
+            )
+)
 ```
 
 <center><h1>Referencias y documentos<h1></center>
@@ -111,12 +209,17 @@ curva_fallecidos
 <br>
 <center><h1>Bases de datos<h1></center>
 <br>
-<center>https://github.com/CSSEGISandData/COVID-19
+<center>https://github.com/CSSEGISandData/COVID-19</center>
 <br>
-https://raw.githubusercontent.com/mauforonda/covid19-bolivia/master/confirmados.csv
+<center>https://raw.githubusercontent.com/mauforonda/covid19-bolivia/master/confirmados.csv</center>
 <br>
-https://raw.githubusercontent.com/mauforonda/covid19-bolivia/master/decesos.csv</center>
-
+<center>https://raw.githubusercontent.com/mauforonda/covid19-bolivia/master/decesos.csv</center>
+<br>
+<center>https://data.worldbank.org/indicator/SP.POP.TOTL</center>
+<br>
+<center>https://data.worldbank.org/indicator/SP.POP.TOTL</center>
+<br>
+<center>https://www.ine.gob.bo/subtemas_cuadros/demografia_html/PC20106.htm</center>
 <br>
 <br>
 <center><h1>R y librearías utilizadas<h1></center>
@@ -137,10 +240,11 @@ Hadley Wickham and Lionel Henry (2020). tidyr: Tidy Messy Data. R package versio
 
 Hadley Wickham (2019). rvest: Easily Harvest (Scrape) Web Pages. R package version 0.3.4. https://CRAN.R-project.org/package=rvest
 
+Greg Lin (2020). reactable: Interactive Data Tables Based on 'React Table'. R package version 0.2.0. https://CRAN.R-project.org/package=reactable
+
 Yihui Xie (2019). knitr: A General-Purpose Package for Dynamic Report Generation in R. R package version 1.24.
 </small>
-<br>
-<br>
+
 
 
 

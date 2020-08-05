@@ -1,5 +1,5 @@
-"0","knitr::opts_chunk$set(echo = TRUE)"
-"0","source(""limpieza_graficos.R"")"
+"0","source(""limpieza_graficos.R"")
+"
 "2","Parsed with column specification:
 cols(
   Fecha = [34mcol_date(format = """")[39m,
@@ -46,12 +46,83 @@ cols(
 "
 "2","See spec(...) for full column specifications.
 "
-"2","
+"2","Missing column names filled in: 'X65' [65]"
+"2","Parsed with column specification:
+cols(
+  .default = col_double(),
+  `Country Name` = [31mcol_character()[39m,
+  `Country Code` = [31mcol_character()[39m,
+  `Indicator Name` = [31mcol_character()[39m,
+  `Indicator Code` = [31mcol_character()[39m,
+  `2019` = [33mcol_logical()[39m,
+  X65 = [33mcol_logical()[39m
+)
 "
-"2","
+"2","See spec(...) for full column specifications.
 "
-"0","Sys.setlocale(locale = ""es_ES.UTF-8"")"
-"1","[1]"
-"1"," ""es_ES.UTF-8/es_ES.UTF-8/es_ES.UTF-8/C/es_ES.UTF-8/en_US.UTF-8"""
-"1","
+"2","Default config will estimate R on weekly sliding windows.
+    To change this change the t_start and t_end arguments. 
 "
+"2","You're estimating R too early in the epidemic to get the desired
+            posterior CV."
+"2","Unknown or uninitialised column: `dates`."
+"2","Default config will estimate R on weekly sliding windows.
+    To change this change the t_start and t_end arguments. 
+"
+"2","You're estimating R too early in the epidemic to get the desired
+            posterior CV."
+"2","Unknown or uninitialised column: `dates`."
+"2","Default config will estimate R on weekly sliding windows.
+    To change this change the t_start and t_end arguments. 
+"
+"2","You're estimating R too early in the epidemic to get the desired
+            posterior CV."
+"2","Unknown or uninitialised column: `dates`."
+"2","Default config will estimate R on weekly sliding windows.
+    To change this change the t_start and t_end arguments. 
+"
+"2","You're estimating R too early in the epidemic to get the desired
+            posterior CV."
+"2","Unknown or uninitialised column: `dates`."
+"2","Default config will estimate R on weekly sliding windows.
+    To change this change the t_start and t_end arguments. 
+"
+"2","You're estimating R too early in the epidemic to get the desired
+            posterior CV."
+"2","Unknown or uninitialised column: `dates`."
+"2","Default config will estimate R on weekly sliding windows.
+    To change this change the t_start and t_end arguments. 
+"
+"2","You're estimating R too early in the epidemic to get the desired
+            posterior CV."
+"2","Unknown or uninitialised column: `dates`."
+"2","Default config will estimate R on weekly sliding windows.
+    To change this change the t_start and t_end arguments. 
+"
+"2","You're estimating R too early in the epidemic to get the desired
+            posterior CV."
+"2","Unknown or uninitialised column: `dates`."
+"2","Default config will estimate R on weekly sliding windows.
+    To change this change the t_start and t_end arguments. 
+"
+"2","You're estimating R too early in the epidemic to get the desired
+            posterior CV."
+"2","Unknown or uninitialised column: `dates`."
+"2","Default config will estimate R on weekly sliding windows.
+    To change this change the t_start and t_end arguments. 
+"
+"2","You're estimating R too early in the epidemic to get the desired
+            posterior CV."
+"2","Unknown or uninitialised column: `dates`."
+"2","Default config will estimate R on weekly sliding windows.
+    To change this change the t_start and t_end arguments. 
+"
+"2","You're estimating R too early in the epidemic to get the desired
+            posterior CV."
+"2","Unknown or uninitialised column: `dates`."
+"2","`summarise()` regrouping output by 'pais_region' (override with `.groups` argument)
+"
+"2","... is ignored in group_split(<grouped_df>), please use group_by(..., .add = TRUE) %>% group_split()"
+"2","`summarise()` regrouping output by 'pais_region' (override with `.groups` argument)
+"
+"2","... is ignored in group_split(<grouped_df>), please use group_by(..., .add = TRUE) %>% group_split()"

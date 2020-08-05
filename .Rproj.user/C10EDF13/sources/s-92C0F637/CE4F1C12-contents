@@ -1,5 +1,19 @@
 library(futurevisions)
 
+citation("reactable")
+
+codigos <- read_csv("/Users/rafalopezv/Documents/covid_latam/input/codigos_covid_paises.csv")
+
+codigos %<>% 
+  select(pais_region = country_region, pais_nombre_corto)
+
+df_mundo %>%
+  merge(., codigos, all.x = T) %>% 
+  
+
+df_mundo %>% arrange(desc(fecha))
+  pull(pais_region) %>% unique
+  
 df_dptos %>% 
   filter(base == "confirmados") -> temp
 
