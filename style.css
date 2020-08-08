@@ -16,11 +16,13 @@ a {
     color: #2A9D8F; /* darker color when hovering */
   }
 
-/*----------------- font-color ---------------------*/  
-h1, h2, h3 {
+/*----------------- font-color and center headings ---------------------*/  
+h1, h2, h3, h4 {
  color: #3f3f3f;
+ text-align: center;
 }
 
 p { 
  color: #3f3f3f;
 }
+

@@ -1,4 +1,5 @@
 ---
+title: "COVID-19 en Bolivia"
 output: 
   html_document: 
     css: style.css
@@ -10,9 +11,6 @@ knitr::opts_chunk$set(echo = TRUE)
 source("limpieza_graficos.R")
 Sys.setlocale(locale = "es_ES.UTF-8")
 ```
-
-
-<center><b><h1>COVID-19 en Bolivia</h1></b></center>
 <br>
 <center>[Juan Cristóbal Birbuet](https://www.linkedin.com/in/juan-cristóbal-birbuet-rosazza-b563208/) & [Rafael López V.](https://rafalopezv.io/about/)</center>
 <br>
@@ -209,7 +207,7 @@ df_mundo %>%
 <center><small>Clic en el ícono</small></center>
 <br>
 <br>
-<center>[<img src = "github.png"  height="60" width="90">](https://github.com/rafalopezv/covid_bolivia)</center>
+<center>[<img src = "github.png"  height="60" width="80">](https://github.com/rafalopezv/covid_bolivia)</center>
 <br>
 <br>
 <center><h1>Bases de datos<h1></center>
