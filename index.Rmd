@@ -17,7 +17,7 @@ Sys.setlocale(locale = "es_ES.UTF-8")
 <center>Última actualización: `r format(Sys.time(), '%d %B, %Y, %X  %Z')`</center>
 <br>
 <br>
-<center><h1>Número de Reproducción Efectivo dependiente del tiempo (Rt)</h1></center>
+<h1>Número de Reproducción Efectivo dependiente del tiempo (Rt)</h1>
 <br>
 <br>
 En esta sección se presenta el cálculo semanal del Número de Reproducción Efectivo dependiente del tiempo (Rt) para Bolivia y sus 9 Departamentos. El cálculo se actualiza cada semana y se efectúa con base en el reporte oficial de personas fallecidas, en lugar de hacerlo con el número de personas infectadas. Lo anterior permite reducir el “ruido estadístico” que suele producirse a causa de las variaciones en el número de los test que se realizan, la demora en los resultados de los test, y/o cambios en el protocolo de los test. 
@@ -29,13 +29,13 @@ En nuestro caso, Rt muestra la velocidad de propagación semanal del virus. Un R
 ¿Cuál es la diferencia entre R0 y Rt? Mientras que R0 describe el potencial de propagación inicial de una infección en una población completamente susceptible, el número reproductivo efectivo, Rt, captura la transmisión una vez que el virus se propaga y a medida que se inician las medidas de contención
 <br>
 <br>
-<center><h1>Rt en la última semana</h1></center>
+<h1>Rt en la última semana</h1>
 ```{r, include=T, echo = F}
 rt_ult_semana
 ```
 <br>
 <br>
-<center><h1>Rt: Serie de tiempo</h1></center>
+<h1>Rt: Serie de tiempo</h1>
 ```{r, include=T, echo = F}
 rt_tiempo_g[[2]]
 rt_tiempo_g[[1]]
@@ -220,12 +220,10 @@ df_mundo %>%
 <br>
 <center>https://data.worldbank.org/indicator/SP.POP.TOTL</center>
 <br>
-<center>https://data.worldbank.org/indicator/SP.POP.TOTL</center>
-<br>
 <center>https://www.ine.gob.bo/subtemas_cuadros/demografia_html/PC20106.htm</center>
 <br>
 <br>
-<center><h1>R y librearías utilizadas<h1></center>
+<h1>R y librearías utilizadas<h1>
 <br>
 
 <small>
