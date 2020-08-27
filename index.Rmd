@@ -223,10 +223,11 @@ df_mundo %>%
 <center>https://www.ine.gob.bo/subtemas_cuadros/demografia_html/PC20106.htm</center>
 <br>
 <br>
-<h1>R y librearías utilizadas<h1>
+<h1>R y librearías utilizadas</h1>
 <br>
 
 <small>
+
 Anne Cori (2019). EpiEstim: Estimate Time Varying Reproduction Numbers from Epidemic Curves. R package version 2.2-1. https://CRAN.R-project.org/package=EpiEstim
 
 Joshua Kunst (2020). highcharter: A Wrapper for the 'Highcharts' Library. http://jkunst.com/highcharter, https://github.com/jbkunst/highcharter.
