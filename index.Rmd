@@ -17,6 +17,9 @@ Sys.setlocale(locale = "es_ES.UTF-8")
 <center>Última actualización: `r format(Sys.time(), '%d %B, %Y, %X  %Z')`</center>
 <br>
 <br>
+El día domingo 6 de septiembre se reportó la incorporación en los registros oficiales de 1,570 casos adicionales de fallecimientos en el Departamento de Santa Cruz , si bien se presume que estos fallecimientos se produjeron entre los meses de junio y agosto, se desconoce la fecha exacta de cada caso. Este hecho altera las mediciones que se realizaban semanalmente para el Departamento de Santa Cruz y para el total a nivel nacional, por este motivo, se suspenderá temporalmente la actualización de esta página, hasta encontrar una solución para corregir este problema de medición.
+<br>
+<br>
 <h1>Número de Reproducción Efectivo dependiente del tiempo (Rt)</h1>
 <br>
 <br>

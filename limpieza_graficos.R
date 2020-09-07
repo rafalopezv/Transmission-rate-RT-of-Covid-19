@@ -41,9 +41,9 @@ dptos2_m <- read_csv("https://raw.githubusercontent.com/mauforonda/covid19-boliv
 deptos2 %<>% bind_rows(., dptos2_m)
 rm(dptos2_m)
 
-# quitar fecha actual
+# quitar fecha en la que se da el problema
 deptos2 %<>% 
-  filter(!Fecha %in% (lubridate::now() %>% as.Date()))
+  filter(Fecha < "2020-09-06")
 
 # verticalizar y juntar con base de poblacion
 deptos2 %>% 
@@ -216,14 +216,18 @@ rm(df)
 bol_confirmados <- df_mundo %>% 
   filter(
     pais_region == "Bolivia",
-    base == "confirmados"
+    base == "confirmados",
+    fecha < "2020-09-06"
   )
 
 bol_fallecidos <- df_mundo %>% 
   filter(
     pais_region == "Bolivia",
-    base == "fallecidos"
+    base == "fallecidos", 
+    fecha < "2020-09-06"
   )
+
+
 
 #----------------------
 # cambio de lenguage en fechas
