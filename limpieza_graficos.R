@@ -41,10 +41,6 @@ dptos2_m <- read_csv("https://raw.githubusercontent.com/mauforonda/covid19-boliv
 deptos2 %<>% bind_rows(., dptos2_m)
 rm(dptos2_m)
 
-# quitar fecha en la que se da el problema
-deptos2 %<>% 
-  filter(Fecha < "2020-09-06")
-
 # verticalizar y juntar con base de poblacion
 deptos2 %>% 
   rename(fecha = Fecha) %>% 
@@ -216,15 +212,13 @@ rm(df)
 bol_confirmados <- df_mundo %>% 
   filter(
     pais_region == "Bolivia",
-    base == "confirmados",
-    fecha < "2020-09-06"
+    base == "confirmados"
   )
 
 bol_fallecidos <- df_mundo %>% 
   filter(
     pais_region == "Bolivia",
-    base == "fallecidos", 
-    fecha < "2020-09-06"
+    base == "fallecidos",
   )
 
 
@@ -252,7 +246,6 @@ colores <- c("#264653","#2a9d8f","#e9c46a","#f4a261","#e76f51", "#e63946", "#d90
 df_dptos %>%
   filter(base == "fallecidos") %>% 
   bind_rows(., bol_fallecidos) %>% 
-  filter(fecha > "2020-05-09") %>% 
   group_split(pais_region)  -> temp
 
 map(temp, epistim_intervalo_1) %>%
@@ -322,9 +315,40 @@ highchart() %>%
 
 # serie de tiempo Rt
 temp %>% 
-  janitor::clean_names() %>% 
+  janitor::clean_names() %>%
   group_split(pais_o_region) -> temp_1
-  
+
+#--------------------------------------------------------------
+# correción de Rt por 1500 fallecidos no registrados en scz
+#------------------------------ -------------------------------
+
+temp_1[[2]] %<>% 
+  mutate(
+    promedio = case_when(
+      dia_de_inicio != "2020-09-01"  ~ promedio
+    ),
+    limite_inferior = case_when(
+      dia_de_inicio != "2020-09-01"  ~ limite_inferior
+    ),
+    limite_superior = case_when(
+      dia_de_inicio != "2020-09-01"  ~ limite_superior
+    )
+  ) 
+
+temp_1[[9]] %<>% 
+  mutate(
+    promedio = case_when(
+      dia_de_inicio != "2020-09-01"  ~ promedio
+    ),
+    limite_inferior = case_when(
+      dia_de_inicio != "2020-09-01"  ~ limite_inferior
+    ),
+    limite_superior = case_when(
+      dia_de_inicio != "2020-09-01"  ~ limite_superior
+    )
+  )
+
+
 # ejecutar función para graficos
 map(temp_1, rt_tiempo) -> rt_tiempo_g
 
@@ -371,7 +395,16 @@ df_dptos %>%
   mutate(
     por_millon = casos_acumulados/poblacion *1000000,
     por_millon = round(por_millon, 0)
-  ) %>%
+  )  -> temp
+  
+temp_1 <- which(temp$fecha == "2020-09-06" &  temp$pais_region == "Bolivia")
+temp[temp_1, "por_millon"] <- NA
+
+temp_1 <- which(temp$fecha == "2020-09-06" &  temp$pais_region == "Santa Cruz")
+temp[temp_1, "por_millon"] <- NA
+
+
+temp %>% 
   hchart(
     "line",
     hcaes(
@@ -423,6 +456,10 @@ hchart(
 
 df_dptos %>% 
   filter(base == "fallecidos") -> temp
+
+
+temp_1 <- which(temp$fecha == "2020-09-06" &  temp$pais_region == "Santa Cruz")
+temp[temp_1, "casos_acumulados"] <- NA
 
 hchart(
   temp, "column", hcaes(fecha, casos_acumulados, group = pais_region),
@@ -485,7 +522,7 @@ temp %>%
   ) + 
   scale_fill_manual(values = c("#264653", "#E76F51")) -> curva_confirmados
 
-# aplanamiento de curvas confirmados
+# aplanamiento de curvas fallecidos
 df_dptos %>%
   filter(base == "fallecidos") %>% 
   bind_rows(., bol_fallecidos) %>% 
@@ -510,6 +547,12 @@ df_dptos %>%
       T ~ "no"
     )
   ) -> temp
+
+temp_1 <- temp$pais_region == "Santa Cruz" & temp$semana == 24
+temp[temp_1, "incidencia"] <- NA
+
+temp_1 <- temp$pais_region == "Bolivia" & temp$semana == 24
+temp[temp_1, "incidencia"] <- NA
 
 temp %>% 
   arrange(total) %>% 

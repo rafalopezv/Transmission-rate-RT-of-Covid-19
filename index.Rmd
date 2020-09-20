@@ -85,7 +85,7 @@ evolucion_confirmados
 <center><h1>¿Se están aplanando las curvas?</h1></center>
 <center><h3>Fallecidos por semana</h3></center>
 
-```{r, include=T, echo = F,  fig.height = 15, fig.width = 20}
+```{r, include=T, echo = F,  fig.height = 15, fig.width = 20, warning=F}
 curva_fallecidos
 ```
 <br>
@@ -93,7 +93,7 @@ curva_fallecidos
 <center><h1>¿Se están aplanando las curvas?</h1></center>
 <center><h3>Infectados confirmados por semana</h3></center>
 
-```{r, include=T, echo = F,  fig.height = 15, fig.width = 20}
+```{r, include=T, echo = F,  fig.height = 15, fig.width = 20, warning=F}
 curva_confirmados
 ```
 <center><h1>Tablas<h1></center>
