@@ -11,27 +11,13 @@ source("funciones.R")
 #----------------------------------------
 
 # descarga datos de poblacion
-url <- "https://www.ine.gob.bo/subtemas_cuadros/demografia_html/PC20106.htm"
+poblacion_bol <- rio::import("input/proyeccion_poblacion.xlsx")
+colnames(poblacion_bol)[1] <- "pais_region"
+colnames(poblacion_bol)[2] <- "poblacion"
 
-url %>%
-  read_html() %>%
-  html_table(fill = TRUE) -> poblacion_bol
+poblacion_bol %<>% 
+  select(pais_region, poblacion) 
 
-poblacion_bol <- poblacion_bol[[1]] 
-poblacion_bol %<>% 
-  slice(-(1:2)) 
-colnames(poblacion_bol) <- poblacion_bol %>% slice(1)
-poblacion_bol %<>% slice(-1)
-poblacion_bol %<>% 
-  filter(AÑO == "2020") %>% 
-  dplyr::select(-BOLIVIA, -AÑO) %>% 
-  gather(pais_region, poblacion) %>% 
-  mutate(
-    poblacion = str_replace(poblacion, "\\.", ""),
-    poblacion = str_replace(poblacion, "\\.", ""),
-    poblacion = as.numeric(poblacion)
-  )
-rm(url)
 
 deptos2 <- read_csv("https://raw.githubusercontent.com/mauforonda/covid19-bolivia/master/confirmados.csv") %>% 
   mutate(base = "confirmados")
@@ -46,7 +32,7 @@ deptos2 %>%
   rename(fecha = Fecha) %>% 
   gather(pais_region, casos_acumulados, -fecha, -base) %>% 
   mutate(pais_region = toupper(pais_region)) %>% 
-  left_join(., poblacion_bol, by = "pais_region") -> df_dptos
+  left_join(., poblacion_bol, by = "pais_region")  -> df_dptos
 
 rm(deptos2, poblacion_bol)
 
@@ -281,27 +267,12 @@ highchart() %>%
   ) %>%
   hc_xAxis(title = list(text = ""),
            categories = temp_1$pais_o_region) %>%
-  hc_yAxis(title = list(text = "Rt"), min = 0, gridLineWidth=  0, 
+  hc_yAxis(title = list(text = "Rt"), gridLineWidth =  0.5, 
            plotLines = list(
              list(label = list(text = "Rt = 1"),
                   color = "#D62828",
                   width = 5,
-                  value = 1),
-             list(color = "#81B29A",
-                  width = 0.3,
-                  value = 1.5),
-             list(color = "#81B29A",
-                  width = 0.3,
-                  value = 2),
-             list(color = "#81B29A",
-                  width = 0.3,
-                  value = 2.5),
-             list(color = "#81B29A",
-                  width = 0.3,
-                  value = 0.5),
-             list(color = "#81B29A",
-                  width = 0.3,
-                  value = 3)))  %>% 
+                  value = 1)))  %>% 
   hc_tooltip(enabled = T, valueDecimals = 3, borderWidth = 0.01, style = list(fontFamily = "IBM Plex Mono"),
              pointFormat=paste("<b>{point.pais_o_region}</b><br>
                                Rt última semana: <b>{point.promedio}</b><br>
@@ -571,4 +542,7 @@ temp %>%
     legend.position = "none"
   ) + 
   scale_fill_manual(values = c("#264653", "#E76F51")) -> curva_fallecidos
+
+
+
 
