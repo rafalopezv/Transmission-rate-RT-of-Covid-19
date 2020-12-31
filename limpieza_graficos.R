@@ -24,8 +24,31 @@ deptos2 <- read_csv("https://raw.githubusercontent.com/mauforonda/covid19-bolivi
 dptos2_m <- read_csv("https://raw.githubusercontent.com/mauforonda/covid19-bolivia/master/decesos.csv") %>% 
   mutate(base = "fallecidos")
 
-deptos2 %<>% bind_rows(., dptos2_m)
+deptos2 %<>% 
+  bind_rows(., dptos2_m) %>% 
+  # remover desde el l23 de noviembre en adelante por tener fechas repetidas en este reposotorio
+  filter(Fecha < "2020-11-23")
 rm(dptos2_m)
+
+# jalar datos de a OPS desde el 23 de noviembre en adelante
+deptos3 <- read_csv("https://raw.githubusercontent.com/mauforonda/covid19-bolivia/opsoms/confirmados.csv") %>% 
+  mutate(base = "confirmados") %>% 
+  # corrección de dato de Tarija en base a https://www.boliviasegura.gob.bo/datos.php
+  mutate(Tarija = case_when(
+    Fecha == "2020-12-25" ~ 16891,
+    T ~ Tarija
+  ))
+
+dptos2_m <- read_csv("https://raw.githubusercontent.com/mauforonda/covid19-bolivia/opsoms/decesos.csv") %>% 
+  mutate(base = "fallecidos")
+
+deptos3 %>% 
+  bind_rows(., dptos2_m) %>% 
+  # remover desde el l23 de noviembre en adelante por tener fechas repetidas en este reposotorio
+  filter(Fecha > "2020-11-22") %>% 
+  bind_rows(., deptos2) -> deptos2
+
+rm(deptos3, dptos2_m)
 
 # verticalizar y juntar con base de poblacion
 deptos2 %>% 
