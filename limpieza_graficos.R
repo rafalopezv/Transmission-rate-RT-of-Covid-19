@@ -44,11 +44,16 @@ dptos2_m <- read_csv("https://raw.githubusercontent.com/mauforonda/covid19-boliv
 
 deptos3 %>% 
   bind_rows(., dptos2_m) %>% 
-  # remover desde el l23 de noviembre en adelante por tener fechas repetidas en este reposotorio
+  # remover desde el 23 de noviembre en adelante por tener fechas repetidas en este reposotorio
   filter(Fecha > "2020-11-22") %>% 
   bind_rows(., deptos2) -> deptos2
 
 rm(deptos3, dptos2_m)
+
+# importar de bolvia segura
+readr::read_rds("input/base_bolsegura.Rds") %>% 
+  bind_rows(deptos2, .) -> deptos2
+
 
 # verticalizar y juntar con base de poblacion
 deptos2 %>% 
