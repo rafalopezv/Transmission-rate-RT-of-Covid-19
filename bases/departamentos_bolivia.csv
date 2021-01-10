@@ -263,6 +263,7 @@ dias,base,pais_region,fecha,casos_acumulados,poblacion,total_semanas,semana,inci
 262,confirmados,Beni,2021-01-06,7835,430593,38,38,112
 263,confirmados,Beni,2021-01-07,7835,430593,38,38,0
 264,confirmados,Beni,2021-01-08,8050,430593,38,38,215
+265,confirmados,Beni,2021-01-09,8119,430593,38,38,69
 1,confirmados,Chuquisaca,2020-03-27,1,596470,41,1,0
 2,confirmados,Chuquisaca,2020-03-28,1,596470,41,1,0
 3,confirmados,Chuquisaca,2020-03-29,1,596470,41,1,0
@@ -551,6 +552,7 @@ dias,base,pais_region,fecha,casos_acumulados,poblacion,total_semanas,semana,inci
 286,confirmados,Chuquisaca,2021-01-06,9390,596470,41,41,139
 287,confirmados,Chuquisaca,2021-01-07,9390,596470,41,41,0
 288,confirmados,Chuquisaca,2021-01-08,9656,596470,41,42,266
+289,confirmados,Chuquisaca,2021-01-09,9799,596470,41,42,143
 1,confirmados,Cochabamba,2020-03-21,2,1807378,42,1,0
 2,confirmados,Cochabamba,2020-03-22,3,1807378,42,1,1
 3,confirmados,Cochabamba,2020-03-23,3,1807378,42,1,0
@@ -845,6 +847,7 @@ dias,base,pais_region,fecha,casos_acumulados,poblacion,total_semanas,semana,inci
 292,confirmados,Cochabamba,2021-01-06,16299,1807378,42,42,232
 293,confirmados,Cochabamba,2021-01-07,16299,1807378,42,42,0
 294,confirmados,Cochabamba,2021-01-08,16827,1807378,42,42,528
+295,confirmados,Cochabamba,2021-01-09,16979,1807378,42,43,152
 1,confirmados,La Paz,2020-03-21,1,2765874,42,1,0
 2,confirmados,La Paz,2020-03-22,1,2765874,42,1,0
 3,confirmados,La Paz,2020-03-23,1,2765874,42,1,0
@@ -1139,6 +1142,7 @@ dias,base,pais_region,fecha,casos_acumulados,poblacion,total_semanas,semana,inci
 292,confirmados,La Paz,2021-01-06,40667,2765874,42,42,287
 293,confirmados,La Paz,2021-01-07,40667,2765874,42,42,0
 294,confirmados,La Paz,2021-01-08,41965,2765874,42,42,1298
+295,confirmados,La Paz,2021-01-09,42399,2765874,42,43,434
 1,confirmados,Oruro,2020-03-21,8,501757,42,1,0
 2,confirmados,Oruro,2020-03-22,8,501757,42,1,0
 3,confirmados,Oruro,2020-03-23,8,501757,42,1,0
@@ -1433,6 +1437,7 @@ dias,base,pais_region,fecha,casos_acumulados,poblacion,total_semanas,semana,inci
 292,confirmados,Oruro,2021-01-06,6799,501757,42,42,77
 293,confirmados,Oruro,2021-01-07,6799,501757,42,42,0
 294,confirmados,Oruro,2021-01-08,6896,501757,42,42,97
+295,confirmados,Oruro,2021-01-09,6972,501757,42,43,76
 1,confirmados,Pando,2020-03-28,1,114112,41,1,0
 2,confirmados,Pando,2020-03-29,1,114112,41,1,0
 3,confirmados,Pando,2020-03-30,1,114112,41,1,0
@@ -1720,6 +1725,7 @@ dias,base,pais_region,fecha,casos_acumulados,poblacion,total_semanas,semana,inci
 285,confirmados,Pando,2021-01-06,2761,114112,41,41,49
 286,confirmados,Pando,2021-01-07,2761,114112,41,41,0
 287,confirmados,Pando,2021-01-08,2890,114112,41,41,129
+288,confirmados,Pando,2021-01-09,2907,114112,41,42,17
 1,confirmados,Potosí,2020-03-26,1,847536,41,1,0
 2,confirmados,Potosí,2020-03-27,1,847536,41,1,0
 3,confirmados,Potosí,2020-03-28,3,847536,41,1,2
@@ -2009,6 +2015,7 @@ dias,base,pais_region,fecha,casos_acumulados,poblacion,total_semanas,semana,inci
 287,confirmados,Potosí,2021-01-06,10080,847536,41,41,66
 288,confirmados,Potosí,2021-01-07,10080,847536,41,42,0
 289,confirmados,Potosí,2021-01-08,10147,847536,41,42,67
+290,confirmados,Potosí,2021-01-09,10191,847536,41,42,44
 1,confirmados,Santa Cruz,2020-03-21,9,2783790,42,1,0
 2,confirmados,Santa Cruz,2020-03-22,15,2783790,42,1,6
 3,confirmados,Santa Cruz,2020-03-23,16,2783790,42,1,1
@@ -2303,6 +2310,7 @@ dias,base,pais_region,fecha,casos_acumulados,poblacion,total_semanas,semana,inci
 292,confirmados,Santa Cruz,2021-01-06,55782,2783790,42,42,689
 293,confirmados,Santa Cruz,2021-01-07,55782,2783790,42,42,0
 294,confirmados,Santa Cruz,2021-01-08,57203,2783790,42,42,1421
+295,confirmados,Santa Cruz,2021-01-09,57812,2783790,42,43,609
 1,confirmados,Tarija,2020-03-30,1,503608,41,1,0
 2,confirmados,Tarija,2020-03-31,1,503608,41,1,0
 3,confirmados,Tarija,2020-04-01,1,503608,41,1,0
@@ -2588,6 +2596,7 @@ dias,base,pais_region,fecha,casos_acumulados,poblacion,total_semanas,semana,inci
 283,confirmados,Tarija,2021-01-06,17368,503608,41,41,62
 284,confirmados,Tarija,2021-01-07,17368,503608,41,41,0
 285,confirmados,Tarija,2021-01-08,17520,503608,41,41,152
+286,confirmados,Tarija,2021-01-09,17620,503608,41,41,100
 1,fallecidos,Beni,2020-04-21,1,430593,38,1,0
 2,fallecidos,Beni,2020-04-22,1,430593,38,1,0
 3,fallecidos,Beni,2020-04-23,1,430593,38,1,0
@@ -2851,6 +2860,7 @@ dias,base,pais_region,fecha,casos_acumulados,poblacion,total_semanas,semana,inci
 261,fallecidos,Beni,2021-01-06,386,430593,38,38,10
 262,fallecidos,Beni,2021-01-07,386,430593,38,38,0
 263,fallecidos,Beni,2021-01-08,386,430593,38,38,0
+264,fallecidos,Beni,2021-01-09,388,430593,38,38,2
 1,fallecidos,Chuquisaca,2020-05-04,1,596470,36,1,0
 2,fallecidos,Chuquisaca,2020-05-05,1,596470,36,1,0
 3,fallecidos,Chuquisaca,2020-05-06,1,596470,36,1,0
@@ -3101,6 +3111,7 @@ dias,base,pais_region,fecha,casos_acumulados,poblacion,total_semanas,semana,inci
 248,fallecidos,Chuquisaca,2021-01-06,531,596470,36,36,0
 249,fallecidos,Chuquisaca,2021-01-07,531,596470,36,36,0
 250,fallecidos,Chuquisaca,2021-01-08,535,596470,36,36,4
+251,fallecidos,Chuquisaca,2021-01-09,537,596470,36,36,2
 1,fallecidos,Cochabamba,2020-04-05,1,1807378,40,1,0
 2,fallecidos,Cochabamba,2020-04-06,2,1807378,40,1,1
 3,fallecidos,Cochabamba,2020-04-07,2,1807378,40,1,0
@@ -3380,6 +3391,7 @@ dias,base,pais_region,fecha,casos_acumulados,poblacion,total_semanas,semana,inci
 277,fallecidos,Cochabamba,2021-01-06,1353,1807378,40,40,4
 278,fallecidos,Cochabamba,2021-01-07,1353,1807378,40,40,0
 279,fallecidos,Cochabamba,2021-01-08,1355,1807378,40,40,2
+280,fallecidos,Cochabamba,2021-01-09,1355,1807378,40,40,0
 1,fallecidos,La Paz,2020-03-29,2,2765874,41,1,0
 2,fallecidos,La Paz,2020-03-30,3,2765874,41,1,1
 3,fallecidos,La Paz,2020-03-31,3,2765874,41,1,0
@@ -3666,6 +3678,7 @@ dias,base,pais_region,fecha,casos_acumulados,poblacion,total_semanas,semana,inci
 284,fallecidos,La Paz,2021-01-06,1273,2765874,41,41,28
 285,fallecidos,La Paz,2021-01-07,1273,2765874,41,41,0
 286,fallecidos,La Paz,2021-01-08,1288,2765874,41,41,15
+287,fallecidos,La Paz,2021-01-09,1299,2765874,41,41,11
 1,fallecidos,Oruro,2020-04-10,1,501757,39,1,0
 2,fallecidos,Oruro,2020-04-11,1,501757,39,1,0
 3,fallecidos,Oruro,2020-04-12,2,501757,39,1,1
@@ -3940,6 +3953,7 @@ dias,base,pais_region,fecha,casos_acumulados,poblacion,total_semanas,semana,inci
 272,fallecidos,Oruro,2021-01-06,348,501757,39,39,4
 273,fallecidos,Oruro,2021-01-07,348,501757,39,39,0
 274,fallecidos,Oruro,2021-01-08,354,501757,39,40,6
+275,fallecidos,Oruro,2021-01-09,355,501757,39,40,1
 1,fallecidos,Pando,2020-04-18,1,114112,38,1,0
 2,fallecidos,Pando,2020-04-19,1,114112,38,1,0
 3,fallecidos,Pando,2020-04-20,1,114112,38,1,0
@@ -4206,6 +4220,7 @@ dias,base,pais_region,fecha,casos_acumulados,poblacion,total_semanas,semana,inci
 264,fallecidos,Pando,2021-01-06,172,114112,38,38,1
 265,fallecidos,Pando,2021-01-07,172,114112,38,38,0
 266,fallecidos,Pando,2021-01-08,172,114112,38,38,0
+267,fallecidos,Pando,2021-01-09,172,114112,38,39,0
 1,fallecidos,Potosí,2020-04-07,1,847536,40,1,0
 2,fallecidos,Potosí,2020-04-08,1,847536,40,1,0
 3,fallecidos,Potosí,2020-04-09,1,847536,40,1,0
@@ -4483,6 +4498,7 @@ dias,base,pais_region,fecha,casos_acumulados,poblacion,total_semanas,semana,inci
 275,fallecidos,Potosí,2021-01-06,279,847536,40,40,0
 276,fallecidos,Potosí,2021-01-07,279,847536,40,40,0
 277,fallecidos,Potosí,2021-01-08,280,847536,40,40,1
+278,fallecidos,Potosí,2021-01-09,281,847536,40,40,1
 1,fallecidos,Santa Cruz,2020-03-29,1,2783790,41,1,0
 2,fallecidos,Santa Cruz,2020-03-30,3,2783790,41,1,2
 3,fallecidos,Santa Cruz,2020-03-31,4,2783790,41,1,1
@@ -4769,6 +4785,7 @@ dias,base,pais_region,fecha,casos_acumulados,poblacion,total_semanas,semana,inci
 284,fallecidos,Santa Cruz,2021-01-06,4515,2783790,41,41,8
 285,fallecidos,Santa Cruz,2021-01-07,4515,2783790,41,41,0
 286,fallecidos,Santa Cruz,2021-01-08,4527,2783790,41,41,12
+287,fallecidos,Santa Cruz,2021-01-09,4533,2783790,41,41,6
 1,fallecidos,Tarija,2020-05-04,1,503608,36,1,0
 2,fallecidos,Tarija,2020-05-05,1,503608,36,1,0
 3,fallecidos,Tarija,2020-05-06,1,503608,36,1,0
@@ -5019,3 +5036,4 @@ dias,base,pais_region,fecha,casos_acumulados,poblacion,total_semanas,semana,inci
 248,fallecidos,Tarija,2021-01-06,430,503608,36,36,1
 249,fallecidos,Tarija,2021-01-07,430,503608,36,36,0
 250,fallecidos,Tarija,2021-01-08,431,503608,36,36,1
+251,fallecidos,Tarija,2021-01-09,431,503608,36,36,0
