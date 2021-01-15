@@ -45,22 +45,22 @@ dptos2_m <- read_csv("https://raw.githubusercontent.com/mauforonda/covid19-boliv
 deptos3 %>% 
   bind_rows(., dptos2_m) %>% 
   # remover desde el 23 de noviembre en adelante por tener fechas repetidas en este repositorio
-  filter(Fecha > "2020-11-22" & Fecha < "2021-01-03") %>% 
+  filter(Fecha > "2020-11-22") %>% 
   bind_rows(., deptos2) -> deptos2
 
 rm(deptos3, dptos2_m)
 
 # importar de bolivia segura, compilarla con su base, exportara y juntarla con otras dos bases
-readr::read_rds("input/base_bolsegura.Rds") %>% 
-  unique() %>% # para eliminar la posibilidad de exportar la misma base varias veces
-  bind_rows(., bol_segura()) %>% 
-  unique() %>% # para eliminar la posibilidad de exportar la misma base varias veces
-  bind_rows(deptos2, .) -> deptos2
-
-# exportar Bolvia segura
-readr::read_rds("input/base_bolsegura.Rds") %>% 
-  bind_rows(., bol_segura()) %>% 
-  write_rds("input/base_bolsegura.Rds")
+# readr::read_rds("input/base_bolsegura.Rds") %>% 
+#   unique() %>% # para eliminar la posibilidad de exportar la misma base varias veces
+#   bind_rows(., bol_segura()) %>% 
+#   unique() %>% # para eliminar la posibilidad de exportar la misma base varias veces
+#   bind_rows(deptos2, .) -> deptos2
+# 
+# # exportar Bolvia segura
+# readr::read_rds("input/base_bolsegura.Rds") %>% 
+#   bind_rows(., bol_segura()) %>% 
+#   write_rds("input/base_bolsegura.Rds")
 
 # verticalizar y juntar con base de poblacion
 deptos2 %>% 
