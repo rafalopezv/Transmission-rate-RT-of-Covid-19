@@ -10,11 +10,11 @@ body {
 /*----------------- links ---------------------*/
 
 a { 
-  color: #264653;
+  color: #2A9D8F;
 }
 
  a:hover {
-    color: #2A9D8F; /* darker color when hovering */
+    color: #264653; /* darker color when hovering */
   }
 
 /*----------------- font-color and center headings ---------------------*/  
