@@ -4,7 +4,7 @@ Transmission rate (RT) of Covid-19 calculation for Bolivia's departments
 
 # Live version
 
-https://rafalopezv.github.io/covid_bolivia/
+https://rafalopezv.github.io/Transmission-rate-RT-of-Covid-19/
 
 # Language
 
