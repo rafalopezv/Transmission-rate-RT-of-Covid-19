@@ -6,6 +6,10 @@ Transmission rate (RT) of Covid-19 calculation for Bolivia's departments
 
 https://rafalopezv.github.io/Transmission-rate-RT-of-Covid-19/
 
+# Methodological annex
+
+https://rafalopezv.io/static/avina/anexo_jcb_rlv.pdf
+
 # Language
 
 Spanish
